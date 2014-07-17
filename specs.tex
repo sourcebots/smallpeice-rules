@@ -2,9 +2,45 @@
 \label{sec:specs}
 \newcounter{SpecID}
 
+\subsection{Markers}
+\refstepcounter{SpecID}
+\label{spec:markers}
+
+The arena and tokens in the game are labelled with \emph{libkoki} fiducial
+markers. Each marker number is associated with a particular feature in the
+arena, and also has an associated size. The marker numbers and sizes are as
+follows:
+
+\begin{center}
+\begin{tabular}{lcc}
+  \toprule
+  \textbf{Item} & \textbf{Marker Number} & \textbf{Marker Size (\si{mm})} \\
+  \midrule
+  Arena boundary & 0 -- 27 & 250 \\
+  Tokens (gold) & 28 -- 38 & 150 \\
+  Tokens (silver) & 39 -- 49 & 150 \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+All markers are oriented vertically such that the principal corner of the marker
+(which is indicated by a dark grey dot in the black marker border) is on the
+higher edge.
+
 \subsection{Arena}
 \refstepcounter{SpecID}
 \label{spec:arena}
+
+\begin{enumerate}
+  \item The arena floor is an \SI{8}{m} $\times$ \SI{8}{m} square. The tolerance
+        of these two dimensions is $\pm$ \SI{250}{mm}.
+  \item The floor of the arena is carpeted.
+  \item The outer walls of the arena are at least \SI{600}{mm} high, and the
+        interior surface is white plastic-coated hardboard.
+  \item Each wall of the arena features seven \SI{250}{mm} libkoki markers.
+        TODO: figures for position and numbering.
+  \item TODO: robot zones
+\end{enumerate}
 
 %\subsection{Badges}
 %\refstepcounter{SpecID}
@@ -13,4 +49,6 @@
 \subsection{Tokens}
 \refstepcounter{SpecID}
 \label{spec:tokens}
+
+TODO: decide
 
