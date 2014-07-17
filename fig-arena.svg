@@ -43,7 +43,8 @@
       .zone-boundary {
           stroke: #333;
           stroke-width: 0.02;
-          stroke-dasharray: 0.1, 0.1;
+          stroke-dasharray: 0.14142135, 0.14142135;
+          fill: none;
       }
 
     ]]>
@@ -58,15 +59,17 @@
           x="-0.055" y="-0.055"
           id="token-silver"
           class="token"/>
-    <rect width="0.5" height="0.5"
-          x="-0.25" y="-0.25"
+    <rect width="0.35" height="0.5"
+          x="-0.175" y="-0.25"
           id="robot"/>
     <g id="side-zone">
-      <g transform="translate(0.75 0.75) rotate(45)">
+      <g transform="translate(0.75 0.75) rotate(-45)">
         <use xlink:href="#robot"/>
       </g>
       <!-- boundary -->
-      <line x1="0" y1="4" x2="4" y2="4" class="zone-boundary"/>
+      <!-- <line x1="0" y1="4" x2="4" y2="4" class="zone-boundary"/> -->
+      <path class="zone-boundary"
+            d="M 0 3 h 3 v -3"/>
     </g>
     <g id="token-set">
       <use x="4" y="3.2" xlink:href="#token-gold"/>
