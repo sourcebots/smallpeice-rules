@@ -9,17 +9,33 @@
       .arena-wall {
           fill: none;
           stroke: #555;
-          stroke-width: 4px;
+          stroke-width: .02;
+      }
+
+      .platform {
+          fill: #bbb;
+          stroke: #555;
+          stroke-width: .02;
       }
 
     ]]>
   </style>
   <!-- white background -->
   <rect width="100%" height="100%" fill="white"/>
-  <!-- arena wall -->
-  <rect width="800"
-        height="800"
-        x="100" y="100"
-        class="arena-wall"/>
+  <!-- transform for arena-space coordinates -->
+  <g id="arena"
+     transform="translate(100 100) scale(100)">
+    <!-- arena wall -->
+    <rect width="8"
+          height="8"
+          x="0"
+          y="0"
+          class="arena-wall"/>
+    <!-- central platform -->
+    <rect width="1"
+          height="1"
+          x="3.5" y="3.5"
+          class="platform"/>
+  </g>
 </svg>
 
