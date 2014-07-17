@@ -1,4 +1,4 @@
-rules.pdf: rules.tex
+rules.pdf: rules.tex specs.tex game-rules.tex regulations.tex
 	pdflatex $<
 	pdflatex $<
 
