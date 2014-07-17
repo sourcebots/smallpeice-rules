@@ -3,7 +3,7 @@ rules.pdf: rules.tex
 	pdflatex $<
 
 clean:
-	xargs rm <.gitignore
+	xargs rm -rf <.gitignore
 
 .PHONY: clean
 
