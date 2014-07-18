@@ -3,4 +3,5 @@ rules.pdf
 rules.aux
 rules.log
 rules.out
-fig-*.pdf
+fig-arena.pdf
+fig-sidewall.pdf
