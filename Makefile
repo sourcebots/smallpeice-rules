@@ -1,5 +1,8 @@
 COMPILESVG=inkscape
 
+rules_printable.pdf: rules.pdf
+	convert -density 300 $< $@
+
 rules.pdf: rules.tex specs.tex game-rules.tex regulations.tex fig-sidewall.pdf \
            fig-arena.pdf tournament.tex
 	pdflatex $<
