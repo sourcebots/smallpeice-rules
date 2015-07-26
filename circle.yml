@@ -1,6 +1,6 @@
 dependencies:
   override:
-    - "sudo apt-get update; sudo apt-get install texlive"
+    - "sudo apt-get update; sudo apt-get install texlive || true"
 test:
   override:
     - make rules.pdf
