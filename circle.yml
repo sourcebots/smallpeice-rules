@@ -1,8 +1,0 @@
-dependencies:
-  override:
-    - "sudo apt-get update; sudo apt-get install texlive || true"
-test:
-  override:
-    - make rules.pdf
-  post:
-    - cp rules.pdf $CIRCLE_ARTIFACTS/
