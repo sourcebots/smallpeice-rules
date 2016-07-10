@@ -26,11 +26,11 @@
           stroke-width: 0.01;
       }
 
-      #token-gold {
-          fill: gold;
+      #token-poison {
+          fill: #92e;
       }
 
-      #token-silver {
+      #token-ordinary {
           fill: silver;
       }
 
@@ -63,11 +63,11 @@
   <defs>
     <rect width="0.11" height="0.11"
           x="-0.055" y="-0.055"
-          id="token-gold"
+          id="token-poison"
           class="token"/>
     <rect width="0.11" height="0.11"
           x="-0.055" y="-0.055"
-          id="token-silver"
+          id="token-ordinary"
           class="token"/>
     <rect width="0.35" height="0.5"
           x="-0.175" y="-0.25"
@@ -99,10 +99,10 @@
            x="7"/>
     </g>
     <g id="token-set">
-      <use x="4" y="3.2" xlink:href="#token-gold"/>
-      <use x="4" y="3.6" xlink:href="#token-silver"/>
-      <use x="4" y="4.4" xlink:href="#token-gold"/>
-      <use x="4" y="4.8" xlink:href="#token-silver"/>
+      <use x="4" y="3.2" xlink:href="#token-poison"/>
+      <use x="4" y="3.6" xlink:href="#token-ordinary"/>
+      <use x="4" y="4.4" xlink:href="#token-poison"/>
+      <use x="4" y="4.8" xlink:href="#token-ordinary"/>
     </g>
   </defs>
   <!-- white background -->
