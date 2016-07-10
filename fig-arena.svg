@@ -98,12 +98,6 @@
       <use xlink:href="#wall-marker"
            x="7"/>
     </g>
-    <g id="token-set">
-      <use x="4" y="3.2" xlink:href="#token-poison"/>
-      <use x="4" y="3.6" xlink:href="#token-ordinary"/>
-      <use x="4" y="4.4" xlink:href="#token-poison"/>
-      <use x="4" y="4.8" xlink:href="#token-ordinary"/>
-    </g>
   </defs>
   <!-- white background -->
   <rect width="100%" height="100%" fill="white"/>
@@ -120,10 +114,6 @@
           height="1"
           x="3.5" y="3.5"
           class="platform"/>
-    <!-- central tokens -->
-    <use xlink:href="#token-set"/>
-    <use xlink:href="#token-set" transform="rotate(120 4 4)"/>
-    <use xlink:href="#token-set" transform="rotate(240 4 4)"/>
     <!-- arena wall -->
     <rect width="8"
           height="8"
