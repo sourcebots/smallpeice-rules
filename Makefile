@@ -13,7 +13,7 @@ clean:
 
 fig-%.pdf: fig-%.svg
 ifeq ($(COMPILESVG),inkscape)
-	inkscape -A $@ $<
+	inkscape -A `pwd`/$@ `pwd`/$<
 else
 ifeq ($(COMPILESVG),svg2pdf)
 	svg2pdf $< $@
