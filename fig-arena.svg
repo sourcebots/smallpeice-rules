@@ -83,6 +83,11 @@
       <!-- boundary -->
       <path class="zone-boundary"
             d="M 0 1 h 1 v -1"/>
+      <!-- starting tokens -->
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.25)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.5)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.75)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 2)"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
