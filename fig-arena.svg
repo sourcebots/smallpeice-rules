@@ -44,6 +44,7 @@
           stroke: #333;
           stroke-width: 0.02;
           stroke-dasharray: 0.14142135, 0.14142135;
+          stroke-dashoffset: -50%;
           fill: none;
       }
 
