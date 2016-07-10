@@ -82,6 +82,8 @@
       <!-- boundary -->
       <path class="zone-boundary"
             d="M 0 1 h 1 v -1"/>
+      <path class="zone-boundary"
+            d="M 4 3.75 v -1.75 l -2 2"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
