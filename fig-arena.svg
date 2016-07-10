@@ -123,6 +123,8 @@
           height="0.5"
           x="3.75" y="3.75"
           class="platform"/>
+    <!-- poison token -->
+    <use xlink:href="#token-poison" transform="translate(4 4)"/>
     <!-- arena wall -->
     <rect width="8"
           height="8"
