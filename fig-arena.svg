@@ -110,9 +110,9 @@
     <use xlink:href="#side-zone" transform="rotate(180 4 4)"/>
     <use xlink:href="#side-zone" transform="rotate(270 4 4)"/>
     <!-- central platform -->
-    <rect width="1"
-          height="1"
-          x="3.5" y="3.5"
+    <rect width="0.5"
+          height="0.5"
+          x="3.75" y="3.75"
           class="platform"/>
     <!-- arena wall -->
     <rect width="8"
