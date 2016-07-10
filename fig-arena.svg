@@ -76,13 +76,13 @@
       <rect x="-0.125" y="0" width="0.25" height="0.04" class="marker"/>
     </g>
     <g id="side-zone">
-      <g transform="translate(0.75 0.75) rotate(-45)">
+      <g transform="translate(0.5 0.5) rotate(-45)">
         <use xlink:href="#robot"/>
       </g>
       <!-- boundary -->
       <!-- <line x1="0" y1="4" x2="4" y2="4" class="zone-boundary"/> -->
       <path class="zone-boundary"
-            d="M 0 3 h 3 v -3"/>
+            d="M 0 1 h 1 v -1"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
