@@ -80,7 +80,6 @@
         <use xlink:href="#robot"/>
       </g>
       <!-- boundary -->
-      <!-- <line x1="0" y1="4" x2="4" y2="4" class="zone-boundary"/> -->
       <path class="zone-boundary"
             d="M 0 1 h 1 v -1"/>
       <!-- wall markers -->
