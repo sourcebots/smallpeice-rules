@@ -82,9 +82,6 @@
       <!-- boundary -->
       <path class="zone-boundary"
             d="M 0 1 h 1 v -1"/>
-      <!-- scoring zone -->
-      <path class="zone-boundary"
-            d="M 4 3.75 v -1.75 l -2 2"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
@@ -112,6 +109,14 @@
     <use xlink:href="#side-zone" transform="rotate(90 4 4)"/>
     <use xlink:href="#side-zone" transform="rotate(180 4 4)"/>
     <use xlink:href="#side-zone" transform="rotate(270 4 4)"/>
+    <!-- scoring zones -->
+    <g class="zone-boundary">
+      <!-- outer path -->
+      <path d="M 4 2 L 2 4 L 4 6 L 6 4 z"/>
+      <!-- inner path -->
+      <path d="M 4 2 v 4"/>
+      <path d="M 2 4 h 4"/>
+    </g>
     <!-- central platform -->
     <rect width="0.5"
           height="0.5"
