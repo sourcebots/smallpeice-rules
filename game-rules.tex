@@ -8,8 +8,9 @@
   \item The arena contains sixteen tokens. The layout is detailed in
         Specification~\ref{spec:arena}. Each token is worth 2 points.
   \item At the end of the game, each robot is awarded the sum of the value of
-        all tokens entirely within their starting zone. This value is halved
-        if there are both gold and silver tokens within that zone.
+        all tokens entirely within their scoring zone, unless that scoring zone
+        contains the poison token. If the zone contains the poison token, no
+        points are awarded.
   \item An additional bonus point is awarded for any movement from the start
         position of a robot.
   \item Participating teams must present their robots to match officials at
