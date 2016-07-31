@@ -26,11 +26,11 @@
           stroke-width: 0.01;
       }
 
-      #token-gold {
-          fill: gold;
+      #token-poison {
+          fill: #92e;
       }
 
-      #token-silver {
+      #token-ordinary {
           fill: silver;
       }
 
@@ -44,6 +44,7 @@
           stroke: #333;
           stroke-width: 0.02;
           stroke-dasharray: 0.14142135, 0.14142135;
+          stroke-dashoffset: -50%;
           fill: none;
       }
 
@@ -63,11 +64,11 @@
   <defs>
     <rect width="0.11" height="0.11"
           x="-0.055" y="-0.055"
-          id="token-gold"
+          id="token-poison"
           class="token"/>
     <rect width="0.11" height="0.11"
           x="-0.055" y="-0.055"
-          id="token-silver"
+          id="token-ordinary"
           class="token"/>
     <rect width="0.35" height="0.5"
           x="-0.175" y="-0.25"
@@ -76,13 +77,17 @@
       <rect x="-0.125" y="0" width="0.25" height="0.04" class="marker"/>
     </g>
     <g id="side-zone">
-      <g transform="translate(0.75 0.75) rotate(-45)">
+      <g transform="translate(0.5 0.5) rotate(-45)">
         <use xlink:href="#robot"/>
       </g>
       <!-- boundary -->
-      <!-- <line x1="0" y1="4" x2="4" y2="4" class="zone-boundary"/> -->
       <path class="zone-boundary"
-            d="M 0 3 h 3 v -3"/>
+            d="M 0 1 h 1 v -1"/>
+      <!-- starting tokens -->
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.25)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.5)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 1.75)"/>
+      <use xlink:href="#token-ordinary" transform="translate(0.25 2)"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
@@ -99,12 +104,6 @@
       <use xlink:href="#wall-marker"
            x="7"/>
     </g>
-    <g id="token-set">
-      <use x="4" y="3.2" xlink:href="#token-gold"/>
-      <use x="4" y="3.6" xlink:href="#token-silver"/>
-      <use x="4" y="4.4" xlink:href="#token-gold"/>
-      <use x="4" y="4.8" xlink:href="#token-silver"/>
-    </g>
   </defs>
   <!-- white background -->
   <rect width="100%" height="100%" fill="white"/>
@@ -116,15 +115,21 @@
     <use xlink:href="#side-zone" transform="rotate(90 4 4)"/>
     <use xlink:href="#side-zone" transform="rotate(180 4 4)"/>
     <use xlink:href="#side-zone" transform="rotate(270 4 4)"/>
+    <!-- scoring zones -->
+    <g class="zone-boundary">
+      <!-- outer path -->
+      <path d="M 4 2 L 2 4 L 4 6 L 6 4 z"/>
+      <!-- inner path -->
+      <path d="M 4 2 v 4"/>
+      <path d="M 2 4 h 4"/>
+    </g>
     <!-- central platform -->
-    <rect width="1"
-          height="1"
-          x="3.5" y="3.5"
+    <rect width="0.5"
+          height="0.5"
+          x="3.75" y="3.75"
           class="platform"/>
-    <!-- central tokens -->
-    <use xlink:href="#token-set"/>
-    <use xlink:href="#token-set" transform="rotate(120 4 4)"/>
-    <use xlink:href="#token-set" transform="rotate(240 4 4)"/>
+    <!-- poison token -->
+    <use xlink:href="#token-poison" transform="translate(4 4)"/>
     <!-- arena wall -->
     <rect width="8"
           height="8"

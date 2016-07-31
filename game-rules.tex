@@ -3,17 +3,27 @@
 
 \begin{enumerate}
   \item The game, called \emph{\gamename}, is played in the arena defined in
-        Specification~\ref{spec:arena}. The objective is to collect tokens of
-        one -- but only one -- colour, and to return them to one's home zone.
-  \item The arena contains twelve tokens: six gold and six silver. The layout
-        is detailed in Specification~\ref{spec:arena}. Each token is worth 2
-        points. Three of each colour start on an elevated platform in the centre
-        of the arena.
+        Specification~\ref{spec:arena}. The objective is to collect tokens, and
+        to bring them to one's scoring zone.
+  \item The arena contains sixteen tokens. The layout is detailed in
+        Specification~\ref{spec:arena}. Each token is worth 2 points.
+  \item In the centre of the arena, on a raised platform, is a special poison
+        token, which has the effect of nullifying the scores in a zone.
   \item At the end of the game, each robot is awarded the sum of the value of
-        all tokens entirely within their starting zone. This value is halved
-        if there are both gold and silver tokens within that zone.
+        all tokens entirely within their scoring zone, unless that scoring zone
+        contains the poison token. If the zone contains the poison token, no
+        points are awarded.
   \item An additional bonus point is awarded for any movement from the start
-        position of a robot.
+        position of a robot.\footnote{This can be awarded regardless of the
+        presence of a poison token.}
+  \item A token is in a scoring zone if, and only if, all the following
+        conditions are met:
+        \begin{enumerate}
+          \item At least three of its corners are in contact with the floor in
+                the zone\footnote{Note that this means tokens on the central
+                platform are \emph{not} in any zone.},
+          \item It remains on the floor even if any robot touching it is lifted.
+        \end{enumerate}
   \item Participating teams must present their robots to match officials at
         least one minute before the start of each match. They will be asked to
         place their robot in the arena, and vacate the arena at least 30 seconds
@@ -21,6 +31,8 @@
   \item There will be up to 4 robots in each match.
   \item \org may have any number of match officials within the arena, including
         during the course of matches.
+  \item At the start of each match, robots must be entirely within their
+        starting zones.
   \item At the start of each match, teams will be permitted to lean into the
         arena and start their robots.
   \item Each match lasts $180$ seconds.
