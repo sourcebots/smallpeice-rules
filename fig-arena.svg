@@ -53,10 +53,12 @@
       }
 
       #marker-annotations text {
-          font-size: 0.2;
+          font-size: 0.2px;
           text-anchor: middle;
           fill: #222;
       }
+
+      text { font-size: 0.2px ; }
 
     ]]>
   </style>
