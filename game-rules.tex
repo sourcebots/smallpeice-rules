@@ -3,32 +3,21 @@
 
 \begin{enumerate}
   \item The game, called \emph{\gamename}, is played in the arena defined in
-        Specification~\ref{spec:arena}. The objective is to collect tokens, and
-        to bring them to one's scoring zone.
-  \item The arena contains sixteen tokens. The layout is detailed in
-        Specification~\ref{spec:arena}. Each token is worth 2 points.
-  \item In the centre of the arena, on a raised platform, is a special poison
-        token, which has the effect of nullifying the scores in a zone.
-  \item At the end of the game, each robot is awarded the sum of the value of
-        all tokens entirely within their scoring zone, unless that scoring zone
-        contains the poison token. If the zone contains the poison token, no
-        points are awarded.
-  \item An additional two bonus points are awarded for any movement from the
-        start position of a robot.\footnote{This can be awarded regardless of
-        the presence of a poison token.}
-  \item A token is in a scoring zone if, and only if, all the following
-        conditions are met:
-        \begin{enumerate}
-          \item At least three of its corners are in contact with the floor in
-                the zone\footnote{Note that this means tokens on the central
-                platform are \emph{not} in any zone.},
-          \item It remains on the floor even if any robot touching it is lifted.
-        \end{enumerate}
+        Specification~\ref{spec:arena}. The objective is to race around a
+        track, picking up cans along the way.
+  \item A point is awarded each time a robot crosses a track boundary in a
+        clockwise direction. Points are not awarded for re-crossing a track
+        boundary which has previously reversed over.
+  \item Robots can pick up tin cans which are in the track. Each time a robot
+        crosses a track boundary and is awarded a track boundary point, it is
+        awarded 1 bonus point for each tin can it is carrying.
+  \item At the end of a match, each robot is awarded one additional point for
+        each tin can it is carrying.
+  \item A robot is deemed to have passed a track boundary when the back of the
+        robot passes the line.
   \item Participating teams must present their robots to match officials at
-        least one minute before the start of each match. They will be asked to
-        place their robot in the arena, and vacate the arena at least 30 seconds
-        before the official start time of the match.
-  \item There will be up to 4 robots in each match.
+        least one minute before the start of each match.
+  \item There will be 2 robots in each match.
   \item \org may have any number of match officials within the arena, including
         during the course of matches.
   \item At the start of each match, robots must be entirely within their
@@ -36,9 +25,6 @@
   \item At the start of each match, teams will be permitted to lean into the
         arena and start their robots.
   \item Each match lasts $180$ seconds.
-  \item At the end of each match, teams must wait for instructions to collect
-        their robots or risk disqualification. This is in order to give match
-        officials time to record scores.
   \item Teams may be disqualified from one or all matches by match officials,
         for non-compliance with regulations, lateness to the match, or any other
         reason at the discretion of the judge. Teams disqualified before the
