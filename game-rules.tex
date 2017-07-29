@@ -6,8 +6,7 @@
         Specification~\ref{spec:arena}. The objective is to race around a
         track, picking up cans along the way.
   \item A point is awarded each time a robot crosses a track boundary in a
-        clockwise direction. Points are not awarded for re-crossing a track
-        boundary which has previously reversed over.
+        clockwise direction.
   \item Robots can pick up tin cans which are in the track. Each time a robot
         crosses a track boundary and is awarded a track boundary point, it is
         awarded 1 bonus point for each tin can it is carrying.
@@ -15,6 +14,10 @@
         each tin can it is carrying.
   \item A robot is deemed to have passed a track boundary when the back of the
         robot passes the line.
+  \item Cases of a robot passing backwards over a line are offset against
+        future crossings forward of a line. That is, if a robot crosses two
+        track boundaries backwards, it will need to cross two track boundaries
+        forwards before it can gain any more track boundary points.
   \item Participating teams must present their robots to match officials at
         least one minute before the start of each match.
   \item There will be 2 robots in each match.
