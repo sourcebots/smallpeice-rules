@@ -57,7 +57,7 @@
   </style>
   <!-- common patterns -->
   <defs>
-    <circle cx="0" cy="0" r="0.03" class="can" id="can"/>
+    <rect width="0.1" height="0.1" x="-0.05" y="-0.05" class="can" id="can" />
     <rect width="0.35" height="0.5"
           x="-0.175" y="-0.25"
           id="robot"/>
