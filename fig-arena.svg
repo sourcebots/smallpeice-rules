@@ -74,14 +74,14 @@
       <!-- passing lines -->
       <line class="zone-boundary"
             x1="0" y1="4"
-            x2="1.5" y2="4" />
+            x2="2" y2="4" />
       <line class="zone-boundary"
             x1="4" y1="0"
-            x2="4" y2="1.5" />
+            x2="4" y2="2" />
       <!-- cans -->
-      <use xlink:href="#can" transform="translate(0.75 4.5)"/>
+      <use xlink:href="#can" transform="translate(1 4.5)"/>
       <use xlink:href="#can" transform="translate(1 7)"/>
-      <use xlink:href="#can" transform="translate(4.5 7.25)"/>
+      <use xlink:href="#can" transform="translate(4.5 7)"/>
       <!-- wall markers -->
       <use xlink:href="#wall-marker"
            x="1"/>
@@ -108,7 +108,7 @@
     <use xlink:href="#side-zone"/>
     <use xlink:href="#side-zone" transform="rotate(180 4 4)"/>
     <!-- central median -->
-    <path d="M1.5 1.5 h5 v5 h-5 z" class="arena-wall" />
+    <path d="M2 2 h4 v4 h-4 z" class="arena-wall" />
     <!-- arena wall -->
     <rect width="8"
           height="8"
