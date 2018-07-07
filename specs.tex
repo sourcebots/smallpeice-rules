@@ -2,28 +2,6 @@
 \label{sec:specs}
 \newcounter{SpecID}
 
-\subsection{Markers}
-\refstepcounter{SpecID}
-\label{spec:markers}
-
-The arena, and tokens, are labelled with fiducial markers. Each
-marker number is associated with a particular feature in the arena,
-and also has an associated size.  The marker numbers and sizes are
-as follows:
-
-\begin{center}
-\begin{tabular}{lcc}
-  \toprule
-  \textbf{Item} & \textbf{Marker Number} & \textbf{Marker Size (\si{mm})} \\
-  \midrule
-  Arena boundary & 0 -- 27 & 250 \\
-  Central reservation & 28 -- 39 & 250  \\
-  % 28 to 31 reserved for robot badges
-  Tokens & 100 -- 199 & 100 \\
-  \bottomrule
-\end{tabular}
-\end{center}
-
 \subsection{Arena}
 \refstepcounter{SpecID}
 \label{spec:arena}
@@ -35,9 +13,6 @@ as follows:
   \item The layout of the arena is given in Figure~\ref{fig:arena}.
   \item The outer walls of the arena are at least \SI{600}{mm} high, and the
         interior surface is white plastic-coated hardboard.
-  \item Each wall of the arena features seven \SI{250}{mm} fiducial markers.
-        The positions of these markers is given in Figure~\ref{fig:sidewall}.
-        The marker numbering is given in Figure~\ref{fig:arena}.
   \item The robot starting zones are squares which share corners with the arena
         itself. Their sides are of length \si{1}{m}.
   \item In the centre of the arena is a central reservation raised by
@@ -48,12 +23,6 @@ as follows:
         that is, a robot has passed the boundary when the back of the robot
         is past the tape.
 \end{enumerate}
-
-\begin{sidewaysfigure}
-  \includegraphics[scale=0.58]{fig-sidewall.pdf}
-  \caption{Layout of markers along each arena wall.}
-  \label{fig:sidewall}
-\end{sidewaysfigure}
 
 \begin{figure}
   \includegraphics[scale=0.58]{fig-arena.pdf}
@@ -67,7 +36,7 @@ as follows:
 
 \begin{enumerate}
   \item The tokens are \SI{100}{mm} $\times$ \SI{100}{mm} ($\pm$ \SI{10}{mm})
-        corrugated cardboard boxes, with fiducial markers on each face.
+        corrugated cardboard boxes.
   \item The initial layout of tokens in the arena is given in
         Figure~\ref{fig:arena}.
 \end{enumerate}
