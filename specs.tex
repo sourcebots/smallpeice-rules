@@ -2,11 +2,37 @@
 \label{sec:specs}
 \newcounter{SpecID}
 
+\subsection{Arena}
+\refstepcounter{SpecID}
+\label{spec:arena}
+
+\begin{enumerate}
+  \item The arena floor is an \SI{8}{m} UPDATE $\times$ \SI{8.1}{m} rectangle. The
+        tolerance of these two dimensions is $\pm$ \SI{250}{mm}.
+  \item The floor of the arena is carpeted.
+  \item The layout of the arena is given in Figure~\ref{fig:arena}. This
+        figure is to scale.
+  \item The outer walls of the arena are at least \SI{600}{mm} high, and the
+        interior surface is white plastic-coated hardboard.
+  \item The starting location of the robots is given in Figure~\ref{fig:arena}.
+        Teams are allowed to place their robot anywhere such that the entire
+        robot is within \SI{1}{m} of the starting point, which will be
+        indicated on the floor of the arena.
+  \item The scoring zones are given in Figure~\ref{fig:arena} and are marked out
+        on the arena floor.a
+\end{enumerate}
+
+\begin{figure}
+  \includegraphics[scale=0.58]{fig-arena.pdf}
+  \caption{Layout zones and cans in the arena.}
+  \label{fig:arena}
+\end{figure}
+
 \subsection{Markers}
 \refstepcounter{SpecID}
 \label{spec:markers}
 
-The arena, and tokens, are labelled with fiducial markers. Each
+The arena, and Apples, are labelled with fiducial markers. Each
 marker number is associated with a particular feature in the arena,
 and also has an associated size.  The marker numbers and sizes are
 as follows:
@@ -16,65 +42,34 @@ as follows:
   \toprule
   \textbf{Item} & \textbf{Marker Number} & \textbf{Marker Size (\si{mm})} \\
   \midrule
-  Arena boundary & 0 -- 27 & 250 \\
-  Central reservation & 28 -- 39 & 250  \\
-  % 28 to 31 reserved for robot badges
-  Tokens & 100 -- 199 & 80 \\
+  Arena boundary  &     0 -- 27   &   250 \\
+  Golden Apples   &     28 -- 31  &   80  \\
+  Other Apples (including Red and Rotten Apples) & 32 -- 40 & 80 \\
   \bottomrule
 \end{tabular}
 \end{center}
 
-\subsection{Arena}
+\subsection{Apples}
 \refstepcounter{SpecID}
-\label{spec:arena}
+\label{spec:apples}
 
 \begin{enumerate}
-  \item The arena floor is an \SI{8}{m} $\times$ \SI{8.1}{m} rectangle. The
-        tolerance of these two dimensions is $\pm$ \SI{250}{mm}.
-  \item The floor of the arena is carpeted.
-  \item The layout of the arena is given in Figure~\ref{fig:arena}. This
-        figure is to scale.
-  \item The outer walls of the arena are at least \SI{600}{mm} high, and the
-        interior surface is white plastic-coated hardboard.
-  \item The outer track of the arena is \SI{1.5}{m} wide along the \SI{8}{m}
-        edges, and \SI{1.55}{m} wide along the \SI{8.1}{m} edges.
-  \item The central reservation is surrounded by walls, which are \SI{358}{mm}
-        high.
-  \item The starting location of the robots is given in Figure~\ref{fig:arena}.
-        Teams are allowed to place their robot anywhere such that the entire
-        robot is within \SI{1}{m} of the starting point, which will be
-        indicated on the floor of the arena. The starting zones are along the
-        shorter (\SI{8}{m}) walls of the arena.
-  \item There is a short-cut through the central reservation, as specified in
-        Figure~\ref{fig:arena}. It is \SI{1.34}{m} wide.
-  \item Within the short-cut there are fixed obstacles. These have a square
-        cross-section, with the area touching the floor being a square with
-        edges of length \SI{200}{mm}. Their height is deliberately left
-        unspecified here. Their layout is given in Figure~\ref{fig:arena}.
-  \item In the centre of the arena is a pedestal holding the super can. The
-        pedestal is \SI{358}{mm} high, and is a square with sides of length
-        \SI{200}{mm}, rotated at 45\degree{} to the arena.
-  \item The track boundaries are visually delineated on the floor of the arena
-        by metal tape. The actual boundary is on the trailing edge of the tape
-        -- that is, a robot has passed the boundary when the back of the robot
-        is past the tape.
+  \item 'Apples' are cubes of side length \SI{100}{mm}($\pm$\SI{10}{mm}).
+  \item They are made of cardboard and have markers on them as detailed in \ref{spec:markers}
+  \item Aditionally, each cube has conductive tape on all edges and has internal
+        circuitry equivalent to a capacitor in parallel with a resistor of large value
+        on the order of $\approx\SI{1}{M\ohm}$.
+  \item The capacitance value varies between cubes as follows:
+  \begin{center}
+      \begin{tabular}{lcc}
+            \toprule
+            \textbf{Apple Type}     &     \textbf{Capacitance (\si{nF})}    \\
+            \midrule
+            Red Apple               &     a UPDATE       \\
+            Golden Apple            &     b UPDATE       \\
+            Rotten Apple            &     c UPDATE       \\
+            \bottomrule
+            \end{tabular}
+  \end{center}
+
 \end{enumerate}
-
-\begin{figure}
-  \includegraphics[scale=0.58]{fig-arena.pdf}
-  \caption{Layout zones and cans in the arena.}
-  \label{fig:arena}
-\end{figure}
-
-\subsection{Tin Cans}
-\refstepcounter{SpecID}
-\label{spec:cans}
-
-\begin{enumerate}
-  \item The tin cans are standard 400g steel tin cans, of height \SI{108}{mm}
-        ($\pm$ \SI{5}{mm}), and diameter \SI{75}{mm} ($\pm$ \SI{5}{mm}).
-  \item The initial layout of tin cans in the arena is given in
-        Figure~\ref{fig:arena}.
-  \item The tin cans are ferromagnetic.
-\end{enumerate}
-
