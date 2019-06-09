@@ -41,5 +41,38 @@
         for non-compliance with regulations, lateness to the match, or any other
         reason at the discretion of the judge. Teams disqualified before the
         start time of a match will not be permitted to enter a robot.
+  \item TIES?
+\end{enumerate}
+
+\section{Scoring}
+\label{sec:scoring}
+\begin{enumerate}
+      \item Robots score points for Apples in their scoring zone at the end of the match.
+      \item An Apple is considered 'In' a zone if any part of it is within the zone, when
+            viewed from above. If it is not clear whether an Apple is in a zone or not, this
+            will be determined by the judge or \staff and is entirely at their discretion.
+      \item It is possible for Apples to be stacked on other Apples at the end of the match,
+            in which case, the above ruling is made separately for each Apple.
+            I.e. it is possible that:
+            \begin{enumerate}
+                  \item An Apple is stacked on a scoring Apple but does itself not score, or
+                  \item An Apple is stacked on an Apple that doesn't score but itself does, or
+                  \item An Apple is stacked on a scoring Apple that scores differently to itself.
+            \end{enumerate}
+      \item The scoring zone contains a 'Market Stall' as specified in \ref{spec:scoringZone}
+      \item This has two bonus scoring tiers on it, namely the \emph{lower tier} and \emph{upper tier}
+      \item Apples that are in these zones at the end of the game, as determined by the above rulings,
+            score additional points compared to Apples on the floor in the scoring zone as follows:
+      \begin{center}
+            \begin{tabular}{lccc}
+                  \toprule
+                  a   &    Floor   &   Lower tier   &  Upper tier  \\
+                  \midrule
+                  Red Apple    &    1       &       2        &      3       \\
+                  Golden Apple &    2       &       4        &      6       \\
+                  Rotten Apple &   -1       &      -2        &     -3       \\
+                  \bottomrule
+            \end{tabular}
+      \end{center}
 \end{enumerate}
 
