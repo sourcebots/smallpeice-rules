@@ -142,7 +142,7 @@
       </g>
       <g class="dimension" transform="translate(1.35 0)">
         <line x1="0" y1="1.2" x2="0" y2="0"/>
-        <text x="0.07" y="0.6" class="above">1200±10mm</text>
+        <text x="0" y="0.6" class="above">1200±10mm</text>
       </g>
       <!-- scoring zones -->
       <rect width="5.2"
