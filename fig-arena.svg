@@ -187,11 +187,11 @@
       <use xlink:href="#starting-area" transform="rotate(90 4.5 4.5)"/>
       <use xlink:href="#starting-area" transform="rotate(180 4.5 4.5)"/>
       <use xlink:href="#starting-area" transform="rotate(270 4.5 4.5)"/>
-      <g class="dimension" transform="translate(0 9.1)">
+      <g class="dimension" transform="translate(0 9.12)">
         <line x1="0" y1="0" x2="1" y2="0"/>
         <text x="0.5" y="0.2" class="above">1000±20mm</text>
       </g>
-      <g class="dimension" transform="translate(1.2 8)">
+      <g class="dimension" transform="translate(1.12 8)">
         <line x1="0" y1="1" x2="0" y2="0"/>
         <text x="0.07" y="0.55" lass="above">1000±20mm</text>
       </g>
