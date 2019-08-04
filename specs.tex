@@ -71,4 +71,9 @@ as follows:
         between their starting zone and the scoring zones.
   \item Tokens will start in the neutral area in the arena, with at least \SI{500}{mm}
         between the arena wall, scoring zones and tokens.
+  \item Tokens are considered to be \textit{in control of a robot } if and only if:
+        \begin{enumerate}
+          \item Fewer than 3 corners are in contact with the floor.
+          \item When the robot is lifted, the token remains held by a robot.
+        \end{enumerate}
 \end{enumerate}
