@@ -117,7 +117,7 @@
           x="-0.125"
           y="-0.125"
           id="token"/>
-    <rect width="2.44"
+    <rect width="1.22"
           height="1.22"
           y="-0.61"
           id="side-platform" class="platform"/>
@@ -201,10 +201,11 @@
       <use xlink:href="#side-platform" transform="rotate(180 4.5 4.5) translate(0 4.5)"/>
       <use xlink:href="#side-platform" transform="rotate(270 4.5 4.5) translate(0 4.5)"/>
       <g class="dimension" transform="translate(9 3.8)">
-        <line x1="-2.44" y1="0" x2="0" y2="0"/>
-        <text x="-1.22" y="-0.1" class="above">2400±10mm</text>
+        <line x1="-1.22" y1="0" x2="0" y2="0"/>
+        <text x="-0.61" y="-0.1" class="above">1200±10mm</text>
       </g>
-      <g class="dimension" transform="translate(6.45 4.5)">
+      <line x1="7.1" y1="4.5" x2="7.8" y2="4.5" class="dimension-guide"/>
+      <g class="dimension" transform="translate(7.7 4.5)">
         <line x1="0" y1="0" x2="0" y2="-0.61"/>
         <text x="-0.2" y="-0.25" class="above">600±10mm</text>
       </g>
