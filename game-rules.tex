@@ -19,8 +19,14 @@
         receive an additional 30 points.
   \item An additional bonus point is awarded if a robot moves out of its starting
         zone.
-  \item A token is in a scoring zone if, and only if, it has three corners in contact
-        with the floor in the zone, or with the top surface of the raised area.
+  \item A token is considered to be `in' a zone if either:
+    \begin{enumerate}
+      \item at least three vertices of the token are in contact with the floor or
+            raised area inside the zone.
+      \item the token is in contact only with other tokens which are `in' the zone.
+            In the case where several such tokens are in mutual contact (and not in
+            contact with anything else), all those tokens are `in' the zone.
+    \end{enumerate}
   \item If a token only has 2 corners on the raised area, but the other 2 are over
         a scoring zone, the token is considered in the base scoring zone, scoring 2 points.
   \item Participating teams must present their robots to match officials before
