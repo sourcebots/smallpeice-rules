@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="1100" height="1100"
+     width="1100" height="1300"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -42,6 +42,12 @@
           stroke-dasharray: 0.08 0.08;
           stroke-dashoffset: -50%;
           fill: none;
+      }
+
+      .legend-label {
+        font-size: 0.2px;
+        text-anchor: start;
+        dominant-baseline: middle;
       }
 
     ]]>
@@ -83,22 +89,43 @@
   <!-- white background -->
   <rect width="100%" height="100%" fill="white"/>
   <!-- transform for arena-space coordinates -->
-  <g id="arena"
-     transform="translate(100 100) scale(100)">
-    <!-- starting areas -->
-    <use xlink:href="#starting-area"/>
-    <use xlink:href="#starting-area" transform="rotate(90 4.5 4.5)"/>
-    <use xlink:href="#starting-area" transform="rotate(180 4.5 4.5)"/>
-    <use xlink:href="#starting-area" transform="rotate(270 4.5 4.5)"/>
-    <!-- arena wall -->
-    <rect width="9"
-          height="9"
-          x="0"
-          y="0"
-          class="arena-wall"/>
-    <!-- raised area -->
-    <use xlink:href="#platform" transform="translate(4.5 4.5)"/>
-    <!-- scoring zones -->
-    <use xlink:href="#scoring-zone" transform="translate(4.5 4.5)"/>
+  <g id="arena-space" transform="scale(100)">
+    <g id="arena"
+      transform="translate(1 1)">
+      <!-- starting areas -->
+      <use xlink:href="#starting-area"/>
+      <use xlink:href="#starting-area" transform="rotate(90 4.5 4.5)"/>
+      <use xlink:href="#starting-area" transform="rotate(180 4.5 4.5)"/>
+      <use xlink:href="#starting-area" transform="rotate(270 4.5 4.5)"/>
+      <!-- arena wall -->
+      <rect width="9"
+            height="9"
+            x="0"
+            y="0"
+            class="arena-wall"/>
+      <!-- raised area -->
+      <use xlink:href="#platform" transform="translate(4.5 4.5)"/>
+      <!-- scoring zones -->
+      <use xlink:href="#scoring-zone" transform="translate(4.5 4.5)"/>
+    </g>
+    <g id="legend"
+       transform="translate(2.5 11)">
+      <g transform="translate(0 0)">
+        <use xlink:href="#starting-area" transform="scale(0.5) translate(-0.6 -0.6)"/>
+        <text x="0.5" y="0" class="legend-label">Robot starting area</text>
+      </g>
+      <g transform="translate(4.5 0)">
+        <use xlink:href="#platform" transform="scale(0.2) translate(-0.5 -0.5)"/>
+        <text x="0.5" y="0" class="legend-label">Raised platform</text>
+      </g>
+      <g transform="translate(4.5 0.75)">
+        <rect width="0.7"
+              height="0.7"
+              x="-0.55"
+              y="-0.5"
+              class="scoring-zone" transform="scale(0.5)"/>
+        <text x="0.5" y="0" class="legend-label">Scoring zone</text>
+      </g>
+    </g>
   </g>
 </svg>
