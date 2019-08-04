@@ -215,6 +215,14 @@
       </g>
       <!-- scoring zones -->
       <use xlink:href="#scoring-zones" transform="translate(4.5 4.5)"/>
+      <g class="dimension" transform="translate(6.75 1.8)">
+        <line x1="-2.25" y1="0" x2="2.25" y2="0"/>
+        <text x="0" y="-0.075" class="above">4500±100mm</text>
+      </g>
+      <g class="dimension" transform="translate(1.8 2.25)">
+        <line x1="0" y1="-2.25" x2="0" y2="2.25"/>
+        <text x="0" y="-0.075" class="left-rotated">4500±100mm</text>
+      </g>
       <!-- tokens -->
       <use xlink:href="#token" transform="translate(1.45 1.45)"/>
       <use xlink:href="#token" transform="rotate(90 4.5 4.5) translate(1.45 1.45)"/>
