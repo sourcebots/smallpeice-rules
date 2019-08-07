@@ -13,23 +13,29 @@
     \begin{enumerate}
       \item 1 point for tokens `in the control of' a robot.
       \item 2 points for tokens `in' a teams' scoring zone.
-      \item 5 points for tokens on the raised area of a teams' scoring zone.
+      \item 5 points for tokens `on' the raised area of a teams' scoring zone.
     \end{enumerate}
   \item Tokens are considered to be `in the control of' a robot if and only if:
     \begin{enumerate}
       \item Fewer than 3 corners are in contact with the floor.
       \item When the robot is lifted, the token remains held by the robot.
     \end{enumerate}
-  \item \label{rule:token} A token is considered to be `in' a zone if either:
+  \item A token is considered to be `in' a zone if either:
     \begin{enumerate}
-      \item at least three corners of the token are in contact with the floor or
-            raised area inside the zone.
+      \item at least three corners of the token are in contact with the floor.
       \item the token is in contact only with other tokens which are `in' the zone.
             In the case where several such tokens are in mutual contact (and not in
             contact with anything else), all those tokens are `in' the zone.
     \end{enumerate}
-  \item If a token is suspended on the raised area by fewer than 3 corners, it should be considered
-        in contact with the floor below, and have Rule~\ref{rule:token} re-applied.
+  \item A token is considered to be `on' the raised area if either:
+    \begin{enumerate}
+      \item at least three corners of the token are in contact with the top
+            surface of the raised area.
+      \item the token is in contact only with the top surface of the raised area.
+      \item the token is in contact only with other tokens which are `on' the raised area.
+            In the case where several such tokens are in mutual contact (and not in
+            contact with anything else), all those tokens are `on' the raised area.
+    \end{enumerate}
   \item At the end of the match, if a robot is on top of the raised area, they'll
         receive an additional 30 points.
   \item During a match, a robot may move or interact with any token in the arena.
