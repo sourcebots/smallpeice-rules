@@ -17,14 +17,14 @@
     \end{enumerate}
   \item Tokens are considered to be `in the control of' a robot if and only if:
     \begin{enumerate}
-      \item Fewer than 3 corners are in contact with the floor.
-      \item When the robot is lifted, the token remains held by the robot.
+      \item fewer than 3 corners are in contact with the floor, and
+      \item when the robot is lifted, the token remains held by the robot.
     \end{enumerate}
   \item A token is considered to be `in' a zone if either:
     \begin{enumerate}
-      \item at least three corners of the token are in contact with the floor.
+      \item at least three corners of the token are in contact with the floor, or
       \item the token is in contact only with the floor of the zone and any part
-            of the raised area within the zone.
+            of the raised area within the zone, or
       \item the token is in contact only with other tokens which are `in' the zone.
             In the case where several such tokens are in mutual contact (and not in
             contact with anything else), all those tokens are `in' the zone.
@@ -32,8 +32,8 @@
   \item A token is considered to be `on' the raised area if either:
     \begin{enumerate}
       \item at least three corners of the token are in contact with the top
-            surface of the raised area.
-      \item the token is in contact only with the top surface of the raised area.
+            surface of the raised area, or
+      \item the token is in contact only with the top surface of the raised area, or
       \item the token is in contact only with other tokens which are `on' the raised area.
             In the case where several such tokens are in mutual contact (and not in
             contact with anything else), all those tokens are `on' the raised area.
