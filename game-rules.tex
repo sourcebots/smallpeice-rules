@@ -6,32 +6,30 @@
         Specification~\ref{spec:arena}. The objective is to collect tokens and
         deposit them in the teams scoring zone.
   \item The arena contains 16 tokens.
-  \item At the end of the game, tokens earn points as follows:
+  \item At the end of the match, tokens earn points as follows:
     \begin{enumerate}
-      \item 1 point for tokens in the control of a robot.
-      \item 2 points for tokens in a teams' scoring zone.
+      \item 1 point for tokens `in the control of' a robot.
+      \item 2 points for tokens `in' a teams' scoring zone.
       \item 5 points for tokens on the raised area in a teams' allocated segment.
     \end{enumerate}
-  \item Tokens are considered to be in the control of a robot if and only if:
+  \item Tokens are considered to be `in the control of' a robot if and only if:
     \begin{enumerate}
       \item Fewer than 3 corners are in contact with the floor.
-      \item When the robot is lifted, the token remains held by a robot.
+      \item When the robot is lifted, the token remains held by the robot.
     \end{enumerate}
-  \item At the end of the match, if a robot is on top of the raised area, they'll
-        receive an additional 30 points.
-  \item \label{rule:token} A token is considered to be in a zone if either:
+  \item \label{rule:token} A token is considered to be `in' a zone if either:
     \begin{enumerate}
-      \item at least three vertices of the token are in contact with the floor or
+      \item at least three corners of the token are in contact with the floor or
             raised area inside the zone.
       \item the token is in contact only with other tokens which are `in' the zone.
             In the case where several such tokens are in mutual contact (and not in
             contact with anything else), all those tokens are `in' the zone.
     \end{enumerate}
-  \item The points for a token are based on the owner of the scoring zone, rather than
-        the team who put it there.
   \item If a token is suspended on the raised area by fewer than 3 corners, it should be considered
         in contact with the floor below, and have Rule~\ref{rule:token} re-applied.
-  \item During a match, a robot may move or interact with any token in the arena
+  \item At the end of the match, if a robot is on top of the raised area, they'll
+        receive an additional 30 points.
+  \item During a match, a robot may move or interact with any token in the arena.
   \item Participating teams must present their robots to match officials before
         the start of matches, as regulated by the match officials. Non-compliant
         teams may be disallowed from participating.
