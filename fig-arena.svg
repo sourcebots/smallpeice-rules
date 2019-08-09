@@ -276,7 +276,7 @@
       </g>
       <g transform="translate(0 0.75)">
         <use xlink:href="#token"/>
-        <text x="0.5" y="0" class="legend-label">Token</text>
+        <text x="0.5" y="0" class="legend-label">Token starting position</text>
       </g>
       <g transform="translate(4.2 0)">
         <use xlink:href="#platform" transform="scale(0.2) translate(-0.5 -0.5)"/>
