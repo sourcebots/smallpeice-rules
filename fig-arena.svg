@@ -46,8 +46,9 @@
 
       #token {
           fill: red;
+          fill-opacity: 0.6;
           stroke: black;
-          stroke-width: 0.01;
+          stroke-width: 0.005;
       }
 
       .starting-area {
@@ -133,6 +134,13 @@
           x="-0.125"
           y="-0.125"
           id="token"/>
+    <g id="tokens">
+      <use xlink:href="#token" transform="translate(0.7 3)"/>
+      <use xlink:href="#token" transform="translate(0.9 2.1)"/>
+      <use xlink:href="#token" transform="translate(1.4 1.4)"/>
+      <use xlink:href="#token" transform="translate(2.1 0.9)"/>
+      <use xlink:href="#token" transform="translate(3 0.7)"/>
+    </g>
     <rect width="1.22"
           height="1.22"
           y="-0.61"
@@ -249,10 +257,10 @@
         <text x="0" y="-0.075" class="left-rotated">4200±100mm</text>
       </g>
       <!-- tokens -->
-      <use xlink:href="#token" transform="translate(1.45 1.45)"/>
-      <use xlink:href="#token" transform="rotate(90 4.2 4.2) translate(1.45 1.45)"/>
-      <use xlink:href="#token" transform="rotate(180 4.2 4.2) translate(1.45 1.45)"/>
-      <use xlink:href="#token" transform="rotate(270 4.2 4.2) translate(1.45 1.45)"/>
+      <use xlink:href="#tokens"/>
+      <use xlink:href="#tokens" transform="rotate(90 4.2 4.2)"/>
+      <use xlink:href="#tokens" transform="rotate(180 4.2 4.2)"/>
+      <use xlink:href="#tokens" transform="rotate(270 4.2 4.2)"/>
       <!-- arena wall -->
       <rect width="8.4"
             height="8.4"
