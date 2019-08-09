@@ -275,7 +275,7 @@
         <text x="0.5" y="0" class="legend-label">Robot starting area</text>
       </g>
       <g transform="translate(0 0.75)">
-        <use xlink:href="#token"/>
+        <use xlink:href="#token" transform="translate(0 -0.075)"/>
         <text x="0.5" y="0" class="legend-label">Token starting position</text>
       </g>
       <g transform="translate(4.2 0)">
