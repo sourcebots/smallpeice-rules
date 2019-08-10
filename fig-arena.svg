@@ -16,8 +16,8 @@
       }
 
       .platform {
-          fill: #bbb;
-          stroke: #555;
+          fill: #eee;
+          stroke: #777;
           stroke-width: .02;
       }
 
@@ -60,7 +60,7 @@
       }
 
       .scoring-zone {
-          stroke: #333;
+          stroke: #555;
           stroke-width: 0.02;
           stroke-dasharray: 0.08 0.08;
           stroke-dashoffset: -50%;
