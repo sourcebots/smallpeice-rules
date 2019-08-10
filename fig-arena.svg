@@ -226,7 +226,7 @@
       </g>
       <g class="dimension" transform="translate(0 8.4) translate(1.12 -1)">
         <line x1="0" y1="1" x2="0" y2="0"/>
-        <text x="0.07" y="0.55" lass="above">1000±20mm</text>
+        <text x="0.05" y="0.55" class="right">1000±20mm</text>
       </g>
       <!-- raised areas -->
       <use xlink:href="#side-platform" transform="translate(0 4.2)"/>
