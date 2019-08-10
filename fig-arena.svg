@@ -220,11 +220,11 @@
       <use class="corner corner-1" xlink:href="#starting-area" transform="rotate(90 4.2 4.2)"/>
       <use class="corner corner-2" xlink:href="#starting-area" transform="rotate(180 4.2 4.2)"/>
       <use class="corner corner-3" xlink:href="#starting-area" transform="rotate(270 4.2 4.2)"/>
-      <g class="dimension" transform="translate(0 8.52)">
+      <g class="dimension" transform="translate(0 8.4) translate(0 0.12)">
         <line x1="0" y1="0" x2="1" y2="0"/>
         <text x="0.5" y="0.2" class="above">1000±20mm</text>
       </g>
-      <g class="dimension" transform="translate(1.12 7.4)">
+      <g class="dimension" transform="translate(0 8.4) translate(1.12 -1)">
         <line x1="0" y1="1" x2="0" y2="0"/>
         <text x="0.07" y="0.55" lass="above">1000±20mm</text>
       </g>
