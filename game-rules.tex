@@ -12,20 +12,16 @@
   \item At the end of a match, tokens earn points as follows:
     \begin{enumerate}
       \item 1 point for tokens `in the control of' a robot.
-      \item 2 points for tokens `in' a team's scoring zone.
-      \item 5 points for tokens `on' the raised area of a team's scoring zone.
+      \item 2 points for tokens `in' a team's scoring zone and not on the raised area.
+      \item 5 points for tokens `on' the raised area in a team's scoring zone.
     \end{enumerate}
   \item Tokens are considered to be `in the control of' a robot if and only if:
     \begin{enumerate}
       \item fewer than 3 corners are in contact with the floor, and
       \item when the robot is lifted, the token remains held by the robot.
     \end{enumerate}
-  \item A token is considered to be `in' a zone if either:
-    \begin{enumerate}
-      \item at least three corners of the token are in contact with the floor or surface
-            of the raised area, or
-      \item the projection of token onto the floor is entirely within the scoring zone
-    \end{enumerate}
+  \item A token is considered to be `in' a zone if the vertical projection of token
+        is entirely within the scoring zone.
   \item A token is not in any scoring zone if it is in the control of a robot.
   \item A token is considered to be `on' a raised area if it is in contact with
         the top surface of the raised area.
