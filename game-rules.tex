@@ -22,22 +22,13 @@
     \end{enumerate}
   \item A token is considered to be `in' a zone if either:
     \begin{enumerate}
-      \item at least three corners of the token are in contact with the floor, or
-      \item the token is in contact only with the floor of the zone and any part
-            of the raised area within the zone, or
-      \item the token is in contact only with other tokens which are `in' the zone.
-            In the case where several such tokens are in mutual contact (and not in
-            contact with anything else), all those tokens are `in' the zone.
+      \item at least three corners of the token are in contact with the floor or surface
+            of the raised area, or
+      \item the projection of token onto the floor is entirely within the scoring zone
     \end{enumerate}
-  \item A token is considered to be `on' a raised area if either:
-    \begin{enumerate}
-      \item at least three corners of the token are in contact with the top
-            surface of the raised area, or
-      \item the token is in contact only with the top surface of the raised area, or
-      \item the token is in contact only with other tokens which are `on' the raised area.
-            In the case where several such tokens are in mutual contact (and not in
-            contact with anything else), all those tokens are `on' the raised area.
-    \end{enumerate}
+  \item A token is not in any scoring zone if it is in the control of a robot.
+  \item A token is considered to be `on' a raised area if it is in contact with
+        the top surface of the raised area.
   \item During a match, a robot may move or interact with any token in the arena.
   \item Participating teams must present their robots to match officials before
         the start of matches, as regulated by the match officials. Non-compliant
