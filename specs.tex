@@ -14,18 +14,14 @@
         figure is to scale.
   \item The outer walls of the arena are at least \SI{600}{mm} high, and the
         interior surface is white plastic-coated hardboard.
-  \item Each scoring zone is \SI{2.4}{m} $\times$ \SI{2.4}{m} $\pm$ \SI{100}{mm},
-        resulting in a total size of \SI{4.8}{m} $\times$ \SI{4.8}{m} $\pm$ \SI{200}{mm}
-        for the four scoring zones.
-  \item Scoring zones are bounded by metallic tape around the perimeter
+  \item Each scoring zone is \SI{1.5}{m} $\times$ \SI{1.5}{m} $\pm$ \SI{100}{mm},
+        resulting in a total size of \SI{4.5}{m} $\times$ \SI{4.5}{m} $\pm$ \SI{200}{mm}
+        for the nine scoring zones.
+  \item Scoring zones are bounded by tape around the perimeter
         and internal boundaries on the floor. The inside edge of the tape marks the outside
         edge of the scoring zone.
-  \item The raised area in the centre of the arena is \SI{2.4}{m} $\times$ \SI{2.4}{m} $\pm$ \SI{100}{mm},
-        with a height of \SI{180}{mm} $\pm$ \SI{10}{mm}.
-  \item At the cardinal points of the arena are \SI{1.2}{m} $\times$ \SI{1.2}{m} $\pm$ \SI{100}{mm} walls,
-        at least \SI{180}{mm} $\pm$ \SI{10}{mm} tall.
-  \item Scoring zones for teams are offset 90\degree{} anti-clockwise, such
-        that a team isn't directly in front of their own scoring zone.
+  \item The raised area in the centre of the arena is \SI{1.5}{m} $\times$ \SI{1.5}{m} $\pm$ \SI{100}{mm},
+        with a height of ???mm $\pm$ \SI{10}{mm}.
   \item Each robot will be assigned a corner at the start of every match to indicate its starting area.
         Corner starting areas are \SI{1000}{mm} $\pm$ \SI{20}{mm} square and will be marked by tape.
 \end{enumerate}
@@ -41,13 +37,14 @@
 \label{spec:tokens}
 
 \begin{enumerate}
-  \item Tokens are cuboids with side length \SI{260}{mm} $\pm$ \SI{15}{mm}.
-  \item The exterior surface of the tokens is conductive and fully connected.
-  \item There are 20 possible starting positions for tokens in the arena. These
-        are arranged as indicated in Figure~\ref{fig:arena}.
-  \item At the start of each match, four of the starting positions in each quadrant
-        will be occupied. The position nearest the starting area of each quadrant
-        will always be occupied.
-  \item The pattern of which starting positions are occupied in a match is
-        rotationally symmetrical.
+  \item Tokens are cuboids with side length \SI{150}{mm} $\pm$ \SI{15}{mm}.
+  \item The exterior surface of a token has an AprilTag marker printed upon it.
+  \item All tokens belonging to the same corner will have the same marker ID, as specified in \ref{spec:markers}
+  \item Tokens are arranged as indicated in Figure~\ref{fig:arena}.
 \end{enumerate}
+
+\subsection{Markers}
+\refstepcounter{SpecID}
+\label{spec:marker}
+
+A marker is a marker.
