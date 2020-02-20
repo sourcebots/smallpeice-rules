@@ -1,7 +1,7 @@
 COMPILESVG=inkscape
 
 rules.pdf: rules.tex specs.tex game-rules.tex regulations.tex fig-arena.pdf \
-	fig-sourcebots.pdf
+	fig-sourcebots.pdf fig-sidewall.pdf
 	pdflatex $<
 	pdflatex $<
 

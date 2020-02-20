@@ -22,9 +22,20 @@
         edge of the scoring zone.
   \item The raised area in the centre of the arena is \SI{1.5}{m} $\times$ \SI{1.5}{m} $\pm$ \SI{100}{mm},
         with a height of ???mm $\pm$ \SI{10}{mm}.
+  \item Each wall of the arena features seven \SI{250}{mm} AprilTag markers.
+        The positions of these markers is given in Figure~\ref{fig:sidewall}.
+        The marker numbering is given in Figure~\ref{fig:arena}.
   \item Each robot will be assigned a corner at the start of every match to indicate its starting area.
         Corner starting areas are \SI{1000}{mm} $\pm$ \SI{20}{mm} square and will be marked by tape.
 \end{enumerate}
+
+
+\begin{sidewaysfigure}
+  \includegraphics[scale=0.58]{fig-sidewall.pdf}
+  \caption{Layout of markers along each arena wall.}
+  \label{fig:sidewall}
+\end{sidewaysfigure}
+
 
 \begin{figure}
   \includegraphics[scale=0.58]{fig-arena.pdf}
@@ -38,7 +49,7 @@
 
 \begin{enumerate}
   \item Tokens are cuboids with side length \SI{150}{mm} $\pm$ \SI{15}{mm}.
-  \item The exterior surface of a token has an AprilTag marker printed upon it.
+  \item The exterior surface of a token has an AprilTag marker printed upon it. The marker is identical on all faces.
   \item All tokens belonging to the same corner will have the same marker ID, as specified in \ref{spec:markers}
   \item Tokens are arranged as indicated in Figure~\ref{fig:arena}.
 \end{enumerate}
@@ -47,4 +58,7 @@
 \refstepcounter{SpecID}
 \label{spec:marker}
 
-A marker is a marker.
+\begin{enumerate}
+  \item A `marker' is a square fiducial marker that is a member of the AprilTag 36H11 marker set.
+  \item Every marker has a numeric identifier.
+\end{enumerate}
