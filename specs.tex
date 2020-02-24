@@ -50,9 +50,26 @@
 \begin{enumerate}
   \item Tokens are cuboids with side length \SI{150}{mm} $\pm$ \SI{15}{mm}.
   \item The exterior surface of a token has an AprilTag marker printed upon it. The marker is identical on all faces.
-  \item All tokens belonging to the same corner will have the same marker ID, as specified in \ref{spec:markers}
+  \item All tokens belonging to the same corner will have the same marker ID, as specified in Specification~\ref{spec:marker}.
   \item Tokens are arranged as indicated in Figure~\ref{fig:arena}.
 \end{enumerate}
+
+\begin{table}[t]
+      \centering
+      \begin{tabular}{lcc}
+            \toprule
+            \textbf{Item} & \textbf{Marker Numbers} & \textbf{Marker Size (mm)} \\
+            \midrule
+            Arena boundary & {} 0 -- 27 & 250 \\
+            Corner 0 tokens & 28 & 120 \\
+            Corner 1 tokens & 29 & 120 \\
+            Corner 2 tokens & 30 & 120 \\
+            Corner 3 tokens & 31 & 120 \\
+            \bottomrule
+      \end{tabular}
+      \caption{Marker types, and the corresponding IDs and sizes.}
+      \label{tab:markers}
+\end{table}
 
 \subsection{Markers}
 \refstepcounter{SpecID}
@@ -61,4 +78,5 @@
 \begin{enumerate}
   \item A `marker' is a square fiducial marker that is a member of the AprilTag 36H11 marker set.
   \item Every marker has a numeric identifier.
+  \item Marker IDs are assigned according to Table~\ref{tab:markers}.
 \end{enumerate}
