@@ -175,6 +175,10 @@
             y1="1"
             y2="1"
             class="scoring-zone"/>
+      <g class="dimension" transform="translate(3 0)">
+        <line x1="0" y1="0" x2="1.2" y2="0"/>
+        <text x="0.6" y="0.2" class="above">1200±100mm</text>
+      </g>
       <g class="dimension" transform="translate(1 0)">
         <line x1="0" y1="0" x2="2" y2="0"/>
         <text x="1" y="0.2" class="above">2000±100mm</text>
@@ -241,6 +245,26 @@
       <use class="corner-1" xlink:href="#token-corner" transform="rotate(90 4.2 4.2)"/>
       <use class="corner-2" xlink:href="#token-corner" transform="rotate(180 4.2 4.2)"/>
       <use class="corner-3" xlink:href="#token-corner" transform="rotate(270 4.2 4.2)"/>
+      <g class="dimension" transform="translate(1 0.575)">
+        <line x1="0" y1="0" x2="0.786" y2="0"/>
+        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      </g>
+      <g class="dimension" transform="translate(1 0.575)">
+        <line x1="0" y1="0" x2="0.786" y2="0"/>
+        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      </g>
+      <g class="dimension" transform="translate(1.861 0)">
+        <line x1="0" y1="0" x2="0" y2="0.5"/>
+        <text x="0.6" y="0.25" class="above">500±40mm</text>
+      </g>
+      <g class="dimension" transform="translate(2.871 0.575)">
+        <line x1="0" y1="0" x2="0.786" y2="0"/>
+        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      </g>
+      <g class="dimension" transform="translate(3.81 0.575)">
+        <line x1="0" y1="0" x2="0.786" y2="0"/>
+        <text x="0.6" y="-0.1" class="above">780±40mm</text>
+      </g>
       <!-- arena wall -->
       <rect width="8.4"
             height="8.4"
