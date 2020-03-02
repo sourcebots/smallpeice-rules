@@ -4,27 +4,36 @@
 \begin{enumerate}
   \item The game, called \emph{\gamename}, is played in the arena defined in
         Specification~\ref{spec:arena}. The objective is to collect tokens and
-        deposit them in the teams scoring zone.
-  \item The arena contains 16 tokens.
-  \item There are four scoring zones in the arena, arranged in a $2\times2$
-        grid, with each robot being allocated a single scoring zone. The centre
-        of the arena (approximately a quarter of each scoring zone) is raised.
-  \item At the end of a match, tokens earn points as follows:
+        deposit them in scoring zones.
+  \item The arena contains 24 tokens.
+  \item There are nine scoring zones in the arena, arranged in a $3\times3$
+        grid. The central scoring zone is raised.
+  \item A scoring zone is considered to be `controlled' by a team if and only if:
     \begin{enumerate}
-      \item 1 point for tokens `in the control of' a robot.
-      \item 2 points for tokens `in' a team's scoring zone and not on the raised area.
-      \item 5 points for tokens `on' the raised area in a team's scoring zone.
+      \item the team has tokens in the zone.
+      \item no other team has a greater `weighting of tokens' in the zone.
     \end{enumerate}
-  \item Tokens are considered to be `in the control of' a robot if and only if:
+  \item The `weighting of tokens' in a zone for a team is calculated from the sum of token weights in the zone.
+      Token weights are determined as follows:
+      \begin{enumerate}
+            \item A token `fully in' the zone has a weighting of $2$.
+            \item A token `partially in' the zone has a weighting of $1$.
+    \end{enumerate}
+  \item A `controlled region' is defined as follows:
     \begin{enumerate}
-      \item fewer than 3 corners are in contact with the floor, and
-      \item when the robot is lifted, the token remains held by the robot.
+      \item A `controlled region' is a group of directly adjacent scoring zones controlled by the same team.
+      \item The value of a `controlled region' is calculated by summing the value of all zones within the `controlled region'.
+  \item All scoring zones have a value of exactly $1$, with the exception of the central raised zone which has a value of exactly $2$.
     \end{enumerate}
-  \item A token is considered to be `in' a zone if the vertical projection of token
+  \item At the end of a match, robots earn points as follows:
+    \begin{enumerate}
+      \item $1$ point for moving entirely out of the starting area.
+      \item $n^2$ points for each `controlled region' where $n$ is the value of the `controlled region'. 
+    \end{enumerate}
+  \item A token is considered to be `fully in' a zone if the vertical projection of token
         is entirely within the scoring zone.
-  \item A token is not in any scoring zone if it is in the control of a robot.
-  \item A token is considered to be `on' a raised area if it is in contact with
-        the top surface of the raised area.
+  \item A token is considered to be `partially in' a zone if the vertical projection of token
+        is partially within the scoring zone.
   \item During a match, a robot may move or interact with any token in the arena.
   \item Participating teams must present their robots to match officials before
         the start of matches, as regulated by the match officials. Non-compliant
@@ -34,8 +43,8 @@
         during the course of matches.
   \item At the start of each match, robots must be entirely within their
         starting areas.
-  \item At the start of each match, teams will be permitted to lean into the
-        arena and start their robots.
+%   \item At the start of each match, teams will be permitted to lean into the
+%         arena and start their robots.
   \item Each match lasts $120$ seconds.
   \item Teams may be disqualified from one or all matches by match officials,
         for non-compliance with regulations, lateness to the match, or any other
