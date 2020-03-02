@@ -6,6 +6,10 @@ jobs:
         working_directory: ~/smallpeice-rules/
         steps:
             - checkout
+            - run: apk add inkscape
+            - run:
+                name: Install Submodules
+                command: git submodule sync && git submodule update --init
             - run: make
             - store_artifacts:
                 path: rules.pdf
