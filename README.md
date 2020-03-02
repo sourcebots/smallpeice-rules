@@ -1,6 +1,7 @@
 Smallpeice Rules
 ================
 
+[![CircleCI](https://circleci.com/gh/sourcebots/smallpeice-rules.svg?style=svg)](https://circleci.com/gh/sourcebots/smallpeice-rules)
 
 `master` is the latest version.
 
