@@ -7,26 +7,15 @@
 \label{spec:arena}
 
 \begin{enumerate}
-  \item The arena floor is an \SI{8.4}{m} $\times$ \SI{8.4}{m} rectangle. The
-        tolerance of these two dimensions is $\pm$ \SI{250}{mm}.
-  \item The floor of the arena is carpeted.
+  \item The arena floor is a \SI{6}{m} $\times$ \SI{12}{m} rectangle.
   \item The layout of the arena is given in Figure~\ref{fig:arena}. This
         figure is to scale.
-  \item The outer walls of the arena are at least \SI{350}{mm} high, and the
-        interior surface is white plastic-coated hardboard.
-  \item Each scoring zone is \SI{2}{m} $\times$ \SI{2}{m} $\pm$ \SI{100}{mm},
-        resulting in a total size of \SI{6}{m} $\times$ \SI{6}{m} $\pm$ \SI{200}{mm}
-        for the nine scoring zones.
-  \item Scoring zones are bounded by tape around the perimeter
-        and internal boundaries on the floor. The inside edge of the tape marks the outside
-        edge of the scoring zone.
-  \item The raised area in the centre of the arena is \SI{2}{m} $\times$ \SI{2}{m} $\pm$ \SI{100}{mm},
-        with a height of ???mm $\pm$ \SI{10}{mm}.
-  \item Each wall of the arena features seven \SI{250}{mm} AprilTag markers.
-        The positions of these markers is given in Figure~\ref{fig:sidewall}.
-        The marker numbering is given in Figure~\ref{fig:markers}.
-  \item Each robot will be assigned a corner at the start of every match to indicate its starting area.
-        Corner starting areas are \SI{1000}{mm} $\pm$ \SI{50}{mm} square and will be marked by tape.
+  \item The docking area is \SI{1.5}{m} $\times$ \SI{1.5}{m}.
+  \item The raised areas are each \SI{1.5}{m} $\times$ \SI{1}{m}, and raised
+        from the floor by \SI{0.5}{m}.
+  \item The starting zones are centrally aligned, share one side with the
+        north wall of the arena, and are \SI{0.9}{m} $\times$ \SI{0.9}{m}.
+  \item The canonical definition of the arena is what is in the simulator.
 \end{enumerate}
 
 \begin{figure}
@@ -36,56 +25,27 @@
   \label{fig:arena}
 \end{figure}
 
-
-\begin{sidewaysfigure}
-  \centering
-  \includegraphics[scale=0.58]{fig-sidewall.pdf}
-  \caption{Layout of markers along each arena wall.}
-  \label{fig:sidewall}
-\end{sidewaysfigure}
-
-
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.5]{fig-markers.pdf}
-  \caption{Layout of markers on the arena walls.}
-  \label{fig:markers}
-\end{figure}
-
-\subsection{Tokens}
+\subsection{Containers}
 \refstepcounter{SpecID}
-\label{spec:tokens}
+\label{spec:containers}
 
 \begin{enumerate}
-  \item Tokens are cuboids with side length \SI{150}{mm} $\pm$ \SI{25}{mm}.
-  \item The exterior surface of a token has an AprilTag marker printed upon it. The marker is identical on all faces.
-  \item All tokens belonging to the same corner will have the same marker ID.
-  \item Tokens are arranged as indicated in Figure~\ref{fig:arena}.
+  \item Containers are cuboids with side length \SI{260}{mm}.
+  \item Containers are arranged as indicated in Figure~\ref{fig:arena}.
 \end{enumerate}
 
-\begin{table}[t]
-      \centering
-      \begin{tabular}{lcc}
-            \toprule
-            \textbf{Item} & \textbf{Marker Numbers} & \textbf{Marker Size (mm)} \\
-            \midrule
-            Arena boundary & {} 0 -- 27 & 250 \\
-            Corner 0 tokens & 28 & 120 \\
-            Corner 1 tokens & 29 & 120 \\
-            Corner 2 tokens & 30 & 120 \\
-            Corner 3 tokens & 31 & 120 \\
-            \bottomrule
-      \end{tabular}
-      \caption{Marker types, and the corresponding IDs and sizes.}
-      \label{tab:markers}
-\end{table}
-
-\subsection{Markers}
+\subsection{Forklift}
 \refstepcounter{SpecID}
-\label{spec:marker}
+\label{spec:forklift}
 
 \begin{enumerate}
-  \item A `marker' is a square fiducial marker that is a member of the AprilTag 36H11 marker set.
-  \item Every marker has a numeric identifier.
-  \item Marker IDs are assigned according to Table~\ref{tab:markers}.
+  \item The forklift is a \SI{2.5}{m} long, \SI{1.5}{m} wide, \SI{1.5}{m}
+\end{enumerate}
+
+\subsection{Crane}
+\refstepcounter{SpecID}
+\label{spec:crane}
+
+\begin{enumerate}
+  \item I am the queen of France.
 \end{enumerate}
