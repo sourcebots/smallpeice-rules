@@ -285,6 +285,10 @@
         <line x1="-0.75" y1="0" x2="0.75" y2="0"/>
         <text x="0" y="-0.075" class="above">1500mm</text>
       </g>
+      <!-- TODO: containers -->
+      <!-- TODO: container dimensions -->
+      <!-- TODO: cranes -->
+      <!-- TODO: crane dimensions -->
       <!-- arena wall -->
       <rect width="12"
             height="6"
@@ -300,6 +304,9 @@
         <text x="0.03" y="-0.075" class="left-rotated">6000mm</text>
       </g>
     </g>
+    <!-- TODO: move legend up -->
+    <!-- TODO: centre legend -->
+    <!-- TODO: update legend for new symbols -->
     <g id="legend"
        transform="translate(2.2 10.8)">
       <g transform="translate(0 0)">
