@@ -269,6 +269,22 @@
       <rect width="1.5" height="1" x="5.25" y="5" class="raised-area corner-1"/>
       <rect width="1.5" height="1.5" x="5.25" y="3.5" class="docking-area"/>
       <rect width="1.5" height="1" x="5.25" y="2.5" class="raised-area corner-0"/>
+      <g class="dimension" transform="translate(6 5) translate(-0.87 0)">
+        <line x1="0" y1="1" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">1000mm</text>
+      </g>
+      <g class="dimension" transform="translate(6 3.5) translate(-0.87 0)">
+        <line x1="0" y1="1.5" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">1500mm</text>
+      </g>
+      <g class="dimension" transform="translate(6 2.5) translate(-0.87 0)">
+        <line x1="0" y1="1" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">1000mm</text>
+      </g>
+      <g class="dimension" transform="translate(6 2.38)">
+        <line x1="-0.75" y1="0" x2="0.75" y2="0"/>
+        <text x="0" y="-0.075" class="above">1500mm</text>
+      </g>
       <!-- arena wall -->
       <rect width="12"
             height="6"
