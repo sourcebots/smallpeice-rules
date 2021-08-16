@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="1040" height="1240"
+     width="1040" height="1040"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -265,11 +265,10 @@
         <text x="0.03" y="-0.075" class="left-rotated">6000mm</text>
       </g>
     </g>
-    <!-- TODO: move legend up -->
     <!-- TODO: centre legend -->
     <!-- TODO: update legend for new symbols -->
     <g id="legend"
-       transform="translate(2.2 10.8)">
+       transform="translate(2.2 8.8)">
       <g transform="translate(0 0)">
         <use fill="none" xlink:href="#starting-area" transform="scale(0.5) translate(-0.6 -0.6)"/>
         <text x="0.5" y="0" class="legend-label">Robot starting area</text>
