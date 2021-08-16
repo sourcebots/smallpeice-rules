@@ -20,7 +20,7 @@
           stroke-width: .02;
       }
 
-      #robot {
+      .robot {
           fill: green;
           fill-opacity: 1;
           stroke: black;
@@ -131,6 +131,7 @@
     <!-- TODO: purge unused groups -->
     <rect width="0.35" height="0.4"
           x="-0.175" y="-0.2"
+          class="robot"
           id="robot"/>
     <g id="starting-area">
       <rect width="0.9"
@@ -247,7 +248,8 @@
           <text class="left-rotated" x="0.0" y="-0.12">175mm</text>
         </g>
       </g>
-      <!-- TODO: cranes -->
+      <rect width="1.5" height="0.1" x="5.25" y="2.55" class="robot"/>
+      <rect width="1.5" height="0.1" x="5.25" y="5.85" class="robot"/>
       <!-- arena wall -->
       <rect width="12"
             height="6"
