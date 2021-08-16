@@ -128,7 +128,6 @@
              patternTransform="scale(0.07) rotate(45)">
       <rect width="0.75" height="2" x="0" y="0" style="fill:#ca8; stroke:none"/>
     </pattern>
-    <!-- TODO: purge unused groups -->
     <rect width="0.35" height="0.4"
           x="-0.175" y="-0.2"
           class="robot"
@@ -265,8 +264,6 @@
         <text x="0.03" y="-0.075" class="left-rotated">6000mm</text>
       </g>
     </g>
-    <!-- TODO: centre legend -->
-    <!-- TODO: update legend for new symbols -->
     <g id="legend"
        transform="translate(2.2 7.8)">
       <g transform="translate(0 0)">
