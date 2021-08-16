@@ -241,6 +241,12 @@
         <use xlink:href="#container-1"
              transform="translate(0 -0.95)"/>
       </g>
+      <g class="dimension" transform="translate(6, 3)">
+        <line x1="-5.17" y1="2.3375" x2="-5.17" y2="2.1625"/>
+        <g transform="translate(-5.14 2.25)">
+          <text class="left-rotated" x="0.0" y="-0.12">175mm</text>
+        </g>
+      </g>
       <!-- TODO: container dimensions -->
       <!-- TODO: cranes -->
       <!-- TODO: crane dimensions -->
