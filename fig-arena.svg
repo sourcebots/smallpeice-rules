@@ -237,9 +237,9 @@
              transform="translate(2.75 1.5)"/>
         <use xlink:href="#container-1"
              transform="translate(1.5 0.75)"/>
-        <use xlink:href="#container-0"
-             transform="translate(0 -1.55)"/>
         <use xlink:href="#container-1"
+             transform="translate(0 -1.55)"/>
+        <use xlink:href="#container-0"
              transform="translate(0 -0.95)"/>
       </g>
       <g class="dimension" transform="translate(6, 3)">
