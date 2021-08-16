@@ -154,10 +154,6 @@
     <use id="container-1"
          xlink:href="#container"
          class="corner-1"/>
-    <g id="container-side">
-      <use xlink:href="#container-0"
-           transform="translate(4 3)"/>
-    </g>
     <!-- arrow heads for dimensions -->
     <g id="dimension-arrow-head" transform="scale(0.05)">
       <path d="M0,0 L1,1 L1,-1 L0,0" class="dimension-arrow-head"/>
@@ -207,11 +203,44 @@
         <line x1="-0.75" y1="0" x2="0.75" y2="0"/>
         <text x="0" y="-0.075" class="above">1500mm</text>
       </g>
-      <!-- TODO: containers -->
-      <use xlink:href="#container-side"
-           transform="translate(6 0)"/>
-      <use xlink:href="#container-side"
-           transform="translate(6 0) scale(-1 1)"/>
+      <g transform="translate(6, 3) scale(1 -1)">
+        <use xlink:href="#container-0"
+             transform="translate(-5 -2.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-3.5 -1.8)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-2 -2.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-4.25 -0.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-2.75 -0.6)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-4.8 0.8)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-2.75 1.5)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-1.5 0.75)"/>
+        <use xlink:href="#container-1"
+             transform="translate(5 -2.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(3.5 -1.8)"/>
+        <use xlink:href="#container-0"
+             transform="translate(2 -2.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(4.25 -0.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(2.75 -0.6)"/>
+        <use xlink:href="#container-1"
+             transform="translate(4.8 0.8)"/>
+        <use xlink:href="#container-0"
+             transform="translate(2.75 1.5)"/>
+        <use xlink:href="#container-1"
+             transform="translate(1.5 0.75)"/>
+        <use xlink:href="#container-0"
+             transform="translate(0 -1.55)"/>
+        <use xlink:href="#container-1"
+             transform="translate(0 -0.95)"/>
+      </g>
       <!-- TODO: container dimensions -->
       <!-- TODO: cranes -->
       <!-- TODO: crane dimensions -->
