@@ -247,9 +247,7 @@
           <text class="left-rotated" x="0.0" y="-0.12">175mm</text>
         </g>
       </g>
-      <!-- TODO: container dimensions -->
       <!-- TODO: cranes -->
-      <!-- TODO: crane dimensions -->
       <!-- arena wall -->
       <rect width="12"
             height="6"
