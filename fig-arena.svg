@@ -268,10 +268,26 @@
     <!-- TODO: centre legend -->
     <!-- TODO: update legend for new symbols -->
     <g id="legend"
-       transform="translate(2.2 8.8)">
+       transform="translate(2.2 7.8)">
       <g transform="translate(0 0)">
-        <use fill="none" xlink:href="#starting-area" transform="scale(0.5) translate(-0.6 -0.6)"/>
-        <text x="0.5" y="0" class="legend-label">Robot starting area</text>
+        <use fill="none" xlink:href="#starting-area" transform="scale(0.5)"/>
+        <text x="0.5" y="-0.2" class="legend-label">Forklift</text>
+      </g>
+      <g transform="translate(0 0.6)">
+        <rect class="robot" width="0.4" height="0.1" x="-0.2" y="-0.05"/>
+        <text x="0.5" y="-0.19" class="legend-label">Crane</text>
+      </g>
+      <g transform="translate(0 1.2)">
+        <use xlink:href="#container-0"/>
+        <text x="0.5" y="-0.19" class="legend-label">Container</text>
+      </g>
+      <g transform="translate(0 1.8)">
+        <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="docking-area"/>
+        <text x="0.5" y="-0.19" class="legend-label">Docking Area</text>
+      </g>
+      <g transform="translate(0 2.4)">
+        <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="raised-area corner-0"/>
+        <text x="0.5" y="-0.19" class="legend-label">Raised Area</text>
       </g>
     </g>
   </g>
