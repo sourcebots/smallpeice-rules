@@ -117,6 +117,17 @@
         dominant-baseline: middle;
       }
 
+      .beacon {
+        fill: #d6a440;
+        stroke: none;
+      }
+
+      .beacon-ray {
+        fill: none;
+        stroke: #333;
+        stroke-width: 0.03;
+      }
+
     ]]>
   </style>
   <!-- common patterns -->
@@ -132,6 +143,13 @@
           x="-0.175" y="-0.2"
           class="robot"
           id="robot"/>
+    <g id="beacon">
+      <circle class="beacon" cx="0" cy="0" r="0.1"/>
+      <line x1="0.1" y1="0.1" x2="0.18" y2="0.18" class="beacon-ray"/>
+      <line x1="-0.1" y1="0.1" x2="-0.18" y2="0.18" class="beacon-ray"/>
+      <line x1="-0.1" y1="-0.1" x2="-0.18" y2="-0.18" class="beacon-ray"/>
+      <line x1="0.1" y1="-0.1" x2="0.18" y2="-0.18" class="beacon-ray"/>
+    </g>
     <g id="starting-area">
       <rect width="0.9"
             height="0.9"
@@ -247,6 +265,7 @@
           <text class="left-rotated" x="0.0" y="-0.12">175mm</text>
         </g>
       </g>
+      <!-- cranes -->
       <rect width="1.5" height="0.1" x="5.25" y="2.55" class="robot"/>
       <rect width="1.5" height="0.1" x="5.25" y="5.85" class="robot"/>
       <!-- arena wall -->
@@ -263,9 +282,18 @@
         <line x1="0" y1="-3" x2="0" y2="3"/>
         <text x="0.03" y="-0.075" class="left-rotated">6000mm</text>
       </g>
+      <!-- beacons -->
+      <use xlink:href="#beacon" x="3" y="0"/>
+      <use xlink:href="#beacon" x="9" y="0"/>
+      <use xlink:href="#beacon" x="9" y="6"/>
+      <use xlink:href="#beacon" x="3" y="6"/>
+      <g class="dimension" transform="translate(1.5 0.28)">
+        <line x1="-1.5" y1="0" x2="1.5" y2="0"/>
+        <text x="0" y="0.2" class="above">3000mm</text>
+      </g>
     </g>
     <g id="legend"
-       transform="translate(2.2 7.8)">
+       transform="translate(1.6 7.8)">
       <g transform="translate(0 0)">
         <use fill="none" xlink:href="#starting-area" transform="scale(0.5)"/>
         <text x="0.5" y="-0.2" class="legend-label">Forklift</text>
@@ -278,13 +306,17 @@
         <use xlink:href="#container-0"/>
         <text x="0.5" y="-0.19" class="legend-label">Container</text>
       </g>
-      <g transform="translate(0 1.8)">
+      <g transform="translate(2.2 0)">
         <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="docking-area"/>
         <text x="0.5" y="-0.19" class="legend-label">Docking Area</text>
       </g>
-      <g transform="translate(0 2.4)">
+      <g transform="translate(2.2 0.6)">
         <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="raised-area corner-0"/>
         <text x="0.5" y="-0.19" class="legend-label">Raised Area</text>
+      </g>
+      <g transform="translate(2.2 1.2)">
+        <use xlink:href="#beacon"/>
+        <text x="0.5" y="-0.19" class="legend-label">Beacon</text>
       </g>
     </g>
   </g>
