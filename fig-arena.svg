@@ -3,12 +3,11 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="1040" height="1240"
+     width="1040" height="700"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
     <![CDATA[
-
       .arena-wall {
           fill: none;
           stroke: #555;
@@ -21,7 +20,7 @@
           stroke-width: .02;
       }
 
-      #robot {
+      .robot {
           fill: green;
           fill-opacity: 1;
           stroke: black;
@@ -37,14 +36,8 @@
       .corner-1 {
           fill: #ff6600;
       }
-      .corner-2 {
-          fill: #ff00ff;
-      }
-      .corner-3 {
-          fill: #ffff00;
-      }
 
-      #token {
+      .container {
           fill-opacity: 0.6;
           stroke: black;
           stroke-width: 0.005;
@@ -58,12 +51,25 @@
           stroke-dashoffset: -50%;
       }
 
-      .scoring-zone {
-          stroke: #555;
+      .docking-area {
+          fill: none;
+          stroke: #333;
           stroke-width: 0.02;
           stroke-dasharray: 0.08 0.08;
           stroke-dashoffset: -50%;
-          fill: none;
+      }
+
+      .raised-area {
+          fill-opacity: 0.2;
+          stroke: #333;
+          stroke-width: 0.04;
+      }
+
+      .prow {
+          fill: url(#diagonal-hatch);
+          stroke: #666;
+          stroke-width: 0.03;
+          stroke-linejoin: round;
       }
 
       .dimension line {
@@ -111,103 +117,61 @@
         dominant-baseline: middle;
       }
 
+      .beacon {
+        fill: #d6a440;
+        stroke: none;
+      }
+
+      .beacon-ray {
+        fill: none;
+        stroke: #333;
+        stroke-width: 0.03;
+      }
+
     ]]>
   </style>
   <!-- common patterns -->
   <defs>
+    <pattern id="diagonal-hatch"
+             patternUnits="objectBoundingBox"
+             width="1"
+             height="1"
+             patternTransform="scale(0.07) rotate(45)">
+      <rect width="0.75" height="2" x="0" y="0" style="fill:#ca8; stroke:none"/>
+    </pattern>
     <rect width="0.35" height="0.4"
-          x="-0.175" y="-0.25"
+          x="-0.175" y="-0.2"
+          class="robot"
           id="robot"/>
+    <g id="beacon">
+      <circle class="beacon" cx="0" cy="0" r="0.1"/>
+      <line x1="0.1" y1="0.1" x2="0.18" y2="0.18" class="beacon-ray"/>
+      <line x1="-0.1" y1="0.1" x2="-0.18" y2="0.18" class="beacon-ray"/>
+      <line x1="-0.1" y1="-0.1" x2="-0.18" y2="-0.18" class="beacon-ray"/>
+      <line x1="0.1" y1="-0.1" x2="0.18" y2="-0.18" class="beacon-ray"/>
+    </g>
     <g id="starting-area">
-      <rect width="1"
-            height="1"
-            x="0"
-            y="0"
+      <rect width="0.9"
+            height="0.9"
+            x="-0.45"
+            y="-0.45"
             class="starting-area"/>
-      <g transform="translate(0.5 0.5) rotate(-45)">
+      <g transform="rotate(45)">
         <use xlink:href="#robot"/>
       </g>
     </g>
-    <rect width="0.15"
-          height="0.15"
-          x="-0.075"
-          y="-0.075"
-          id="token"/>
-    <g id="token-group">
-      <use xlink:href="#token" transform="translate(-0.9357 0)"/>
-      <use xlink:href="#token" transform="translate(0 0)"/>
-      <use xlink:href="#token" transform="translate(0.9357 0)"/>
-    </g>
-    <g id="token-corner" transform="translate(4.2 0.575)">
-        <use xlink:href="#token-group" transform="translate(-1.404 0)"/>
-        <use xlink:href="#token-group" transform="translate(-1.404  0) rotate(90 -2.2214 0)"/>
-    </g>
-    <g id="scoring-zones">
-      <!-- platform -->
-      <rect width="2"
-            height="2"
-            x="-1"
-            y="-1"
-            id="platform" class="platform"/>
-      <!-- scoring zones -->
-      <rect width="6"
-            height="6"
-            x="-3"
-            y="-3"
-            class="scoring-zone"/>
-      <line x1="-1"
-            x2="-1"
-            y1="-3"
-            y2="3"
-            class="scoring-zone"/>
-      <line x1="1"
-            x2="1"
-            y1="-3"
-            y2="3"
-            class="scoring-zone"/>  
-      <line x1="-3"
-            x2="3"
-            y1="-1"
-            y2="-1"
-            class="scoring-zone"/>
-      <line x1="-3"
-            x2="3"
-            y1="1"
-            y2="1"
-            class="scoring-zone"/>
-      <g class="dimension" transform="translate(3 0)">
-        <line x1="0" y1="0" x2="1.2" y2="0"/>
-        <text x="0.6" y="0.2" class="above">1200±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(1 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(-1 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(-3 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(0 -3)">
-        <line x1="0" y1="0" x2="0" y2="2"/>
-        <text x="-1" y="0.2" class="left-rotated">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(0 1)">
-        <line x1="0" y1="0" x2="0" y2="2"/>
-        <text x="-1" y="0.2" class="left-rotated">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(-3 3.1)">
-        <line x1="0" y1="0" x2="6" y2="0"/>
-        <text x="3" y="0.2" class="above">6000±200mm</text>
-      </g>
-      <g class="dimension" transform="translate(-3.1 -3)">
-        <line x1="0" y1="0" x2="0" y2="6"/>
-        <text x="-3" y="-0.1" class="left-rotated">6000±200mm</text>
-      </g>
-    </g>
+    <rect id="container"
+          width="0.175"
+          height="0.175"
+          x="-0.0875"
+          y="-0.0875"
+          class="container"/>
+    <use id="container-0"
+         xlink:href="#container"
+         class="corner-0"/>
+    <use id="container-1"
+         xlink:href="#container"
+         class="corner-1"/>
     <!-- arrow heads for dimensions -->
     <g id="dimension-arrow-head" transform="scale(0.05)">
       <path d="M0,0 L1,1 L1,-1 L0,0" class="dimension-arrow-head"/>
@@ -222,85 +186,137 @@
   <!-- white background -->
   <rect width="100%" height="100%" fill="white"/>
   <!-- transform for arena-space coordinates -->
-  <g id="arena-space" transform="scale(100)">
+  <g id="arena-space" transform="scale(75)">
     <g id="arena"
       transform="translate(1 1)">
       <!-- starting areas -->
-      <use class="corner corner-0" xlink:href="#starting-area"/>
-      <use class="corner corner-1" xlink:href="#starting-area" transform="rotate(90 4.2 4.2)"/>
-      <use class="corner corner-2" xlink:href="#starting-area" transform="rotate(180 4.2 4.2)"/>
-      <use class="corner corner-3" xlink:href="#starting-area" transform="rotate(270 4.2 4.2)"/>
-      <g class="dimension" transform="translate(8.4 0) translate(-1 1.12)">
-        <line x1="0" y1="0" x2="1" y2="0"/>
-        <text x="0.4" y="0.2" class="above">1000±50mm</text>
+      <use class="corner corner-0" xlink:href="#starting-area" transform="translate(5.55 0.45)"/>
+      <use class="corner corner-1" xlink:href="#starting-area" transform="translate(6.45 0.45) rotate(90)"/>
+      <g class="dimension" transform="translate(6 0) translate(-0.9 1.02)">
+        <line x1="0" y1="0" x2="0.9" y2="0"/>
+        <text x="0.4" y="0.2" class="above">900mm</text>
       </g>
-      <g class="dimension" transform="translate(8.4 0) translate(-1.12 0)">
+      <g class="dimension" transform="translate(6 0) translate(-1.02 0)">
+        <line x1="0" y1="0.9" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">900mm</text>
+      </g>
+      <!-- ship -->
+      <path d="M5.25,6 V6.5 A0.25 0.25 45 0 0 5.323 6.677 L5.8 7.154 Q6 7.33 6.2 7.154 L6.677 6.677 A0.25 0.25 45 0 0 6.75,6.5 V6" class="prow"/>
+      <rect width="1.5" height="1" x="5.25" y="5" class="raised-area corner-1"/>
+      <rect width="1.5" height="1.5" x="5.25" y="3.5" class="docking-area"/>
+      <rect width="1.5" height="1" x="5.25" y="2.5" class="raised-area corner-0"/>
+      <g class="dimension" transform="translate(6 5) translate(-0.87 0)">
         <line x1="0" y1="1" x2="0" y2="0"/>
-        <text x="-0.6" y="-0.05" class="left-rotated">1000±50mm</text>
+        <text x="-0.6" y="-0.05" class="left-rotated">1000mm</text>
       </g>
-      <!-- scoring zones -->
-      <use xlink:href="#scoring-zones" transform="translate(4.2 4.2)"/>
-      <!-- tokens -->
-      <use class="corner-0" xlink:href="#token-corner"/>
-      <use class="corner-1" xlink:href="#token-corner" transform="rotate(90 4.2 4.2)"/>
-      <use class="corner-2" xlink:href="#token-corner" transform="rotate(180 4.2 4.2)"/>
-      <use class="corner-3" xlink:href="#token-corner" transform="rotate(270 4.2 4.2)"/>
-      <g class="dimension" transform="translate(1 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <g class="dimension" transform="translate(6 3.5) translate(-0.87 0)">
+        <line x1="0" y1="1.5" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">1500mm</text>
       </g>
-      <g class="dimension" transform="translate(1 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <g class="dimension" transform="translate(6 2.5) translate(-0.87 0)">
+        <line x1="0" y1="1" x2="0" y2="0"/>
+        <text x="-0.6" y="-0.05" class="left-rotated">1000mm</text>
       </g>
-      <g class="dimension" transform="translate(1.861 0)">
-        <line x1="0" y1="0" x2="0" y2="0.5"/>
-        <text x="0.6" y="0.25" class="above">500±40mm</text>
+      <g class="dimension" transform="translate(6 2.38)">
+        <line x1="-0.75" y1="0" x2="0.75" y2="0"/>
+        <text x="0" y="-0.075" class="above">1500mm</text>
       </g>
-      <g class="dimension" transform="translate(2.871 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <g transform="translate(6, 3) scale(1 -1)">
+        <use xlink:href="#container-0"
+             transform="translate(-5 -2.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-3.5 -1.8)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-2 -2.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-4.25 -0.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-2.75 -0.6)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-4.8 0.8)"/>
+        <use xlink:href="#container-1"
+             transform="translate(-2.75 1.5)"/>
+        <use xlink:href="#container-0"
+             transform="translate(-1.5 0.75)"/>
+        <use xlink:href="#container-1"
+             transform="translate(5 -2.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(3.5 -1.8)"/>
+        <use xlink:href="#container-0"
+             transform="translate(2 -2.25)"/>
+        <use xlink:href="#container-0"
+             transform="translate(4.25 -0.25)"/>
+        <use xlink:href="#container-1"
+             transform="translate(2.75 -0.6)"/>
+        <use xlink:href="#container-1"
+             transform="translate(4.8 0.8)"/>
+        <use xlink:href="#container-0"
+             transform="translate(2.75 1.5)"/>
+        <use xlink:href="#container-1"
+             transform="translate(1.5 0.75)"/>
+        <use xlink:href="#container-1"
+             transform="translate(0 -1.55)"/>
+        <use xlink:href="#container-0"
+             transform="translate(0 -0.95)"/>
       </g>
-      <g class="dimension" transform="translate(3.81 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="-0.1" class="above">780±40mm</text>
+      <g class="dimension" transform="translate(6, 3)">
+        <line x1="-5.17" y1="2.3375" x2="-5.17" y2="2.1625"/>
+        <g transform="translate(-5.14 2.25)">
+          <text class="left-rotated" x="0.0" y="-0.12">175mm</text>
+        </g>
       </g>
+      <!-- cranes -->
+      <rect width="1.5" height="0.1" x="5.25" y="2.55" class="robot"/>
+      <rect width="1.5" height="0.1" x="5.25" y="5.85" class="robot"/>
       <!-- arena wall -->
-      <rect width="8.4"
-            height="8.4"
+      <rect width="12"
+            height="6"
             x="0"
             y="0"
             class="arena-wall"/>
-      <g class="dimension" transform="translate(4.2 -0.2)">
-        <line x1="-4.2" y1="0" x2="4.2" y2="0"/>
-        <text x="0" y="-0.075" class="above">8400±250mm</text>
+      <g class="dimension" transform="translate(6 -0.2)">
+        <line x1="-6" y1="0" x2="6" y2="0"/>
+        <text x="0" y="-0.075" class="above">12000mm</text>
       </g>
-      <g class="dimension" transform="translate(-0.2 4.2)">
-        <line x1="0" y1="-4.2" x2="0" y2="4.2"/>
-        <text x="0.03" y="-0.075" class="left-rotated">8400±250mm</text>
+      <g class="dimension" transform="translate(-0.2 3)">
+        <line x1="0" y1="-3" x2="0" y2="3"/>
+        <text x="0.03" y="-0.075" class="left-rotated">6000mm</text>
+      </g>
+      <!-- beacons -->
+      <use xlink:href="#beacon" x="3" y="0"/>
+      <use xlink:href="#beacon" x="9" y="0"/>
+      <use xlink:href="#beacon" x="9" y="6"/>
+      <use xlink:href="#beacon" x="3" y="6"/>
+      <g class="dimension" transform="translate(1.5 0.28)">
+        <line x1="-1.5" y1="0" x2="1.5" y2="0"/>
+        <text x="0" y="0.2" class="above">3000mm</text>
       </g>
     </g>
     <g id="legend"
-       transform="translate(2.2 10.8)">
+       transform="translate(1.6 7.8)">
       <g transform="translate(0 0)">
-        <use fill="none" xlink:href="#starting-area" transform="scale(0.5) translate(-0.6 -0.6)"/>
-        <text x="0.5" y="0" class="legend-label">Robot starting area</text>
+        <use fill="none" xlink:href="#starting-area" transform="scale(0.5)"/>
+        <text x="0.5" y="-0.2" class="legend-label">Forklift</text>
       </g>
-      <g transform="translate(0 0.75)">
-        <use xlink:href="#token" transform="translate(0 -0.075)"/>
-        <text x="0.5" y="0" class="legend-label">Token starting position</text>
+      <g transform="translate(0 0.6)">
+        <rect class="robot" width="0.4" height="0.1" x="-0.2" y="-0.05"/>
+        <text x="0.5" y="-0.19" class="legend-label">Crane</text>
       </g>
-      <g transform="translate(4.2 0)">
-        <use xlink:href="#platform" transform="scale(0.2) translate(-0.5 -0.5)"/>
-        <text x="0.5" y="0" class="legend-label">Raised platform</text>
+      <g transform="translate(0 1.2)">
+        <use xlink:href="#container-0"/>
+        <text x="0.5" y="-0.19" class="legend-label">Container</text>
       </g>
-      <g transform="translate(4.2 0.75)">
-        <rect width="0.7"
-              height="0.7"
-              x="-0.55"
-              y="-0.5"
-              class="scoring-zone" transform="scale(0.5)"/>
-        <text x="0.5" y="0" class="legend-label">Scoring zone</text>
+      <g transform="translate(2.2 0)">
+        <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="docking-area"/>
+        <text x="0.5" y="-0.19" class="legend-label">Docking Area</text>
+      </g>
+      <g transform="translate(2.2 0.6)">
+        <rect width="0.4" height="0.4" x="-0.2" y="-0.2" class="raised-area corner-0"/>
+        <text x="0.5" y="-0.19" class="legend-label">Raised Area</text>
+      </g>
+      <g transform="translate(2.2 1.2)">
+        <use xlink:href="#beacon"/>
+        <text x="0.5" y="-0.19" class="legend-label">Beacon</text>
       </g>
     </g>
   </g>
