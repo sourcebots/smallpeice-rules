@@ -7,18 +7,26 @@
 \label{spec:arena}
 
 \begin{enumerate}
-  \item The arena floor is a \SI{6000}{mm} $\times$ \SI{12000}{mm} rectangle.
+  \item The arena floor is an \SI{8.4}{m} $\times$ \SI{8.4}{m} rectangle. The
+        tolerance of these two dimensions is $\pm$ \SI{250}{mm}.
+  \item The floor of the arena is carpeted.
   \item The layout of the arena is given in Figure~\ref{fig:arena}. This
         figure is to scale.
-  \item The docking area is \SI{1500}{mm} $\times$ \SI{1500}{mm}.
-  \item The raised areas are each \SI{1500}{mm} $\times$ \SI{1000}{mm},
-        and raised from the floor by \SI{500}{mm}.
-  \item The starting zones are centrally aligned, share one side with the
-        north wall of the arena, and are \SI{900}{mm} $\times$ \SI{900}{mm}.
-  \item There are four non-directional radio beacons for localization, placed
-        along the longer walls of the arena inset by \SI{3000}{mm}. These
-        beacons have an operational range of \SI{4500}{mm}.
-  \item The canonical definition of the arena is what is in the simulator.
+  \item The outer walls of the arena are at least \SI{350}{mm} high, and the
+        interior surface is white plastic-coated hardboard.
+  \item Each scoring zone is \SI{2}{m} $\times$ \SI{2}{m} $\pm$ \SI{100}{mm},
+        resulting in a total size of \SI{6}{m} $\times$ \SI{6}{m} $\pm$ \SI{200}{mm}
+        for the nine scoring zones.
+  \item Scoring zones are bounded by tape around the perimeter
+        and internal boundaries on the floor. The inside edge of the tape marks the outside
+        edge of the scoring zone.
+  \item The raised area in the centre of the arena is \SI{2}{m} $\times$ \SI{2}{m} $\pm$ \SI{100}{mm},
+        with a height of ???mm $\pm$ \SI{10}{mm}.
+  \item Each wall of the arena features seven \SI{250}{mm} AprilTag markers.
+        The positions of these markers is given in Figure~\ref{fig:sidewall}.
+        The marker numbering is given in Figure~\ref{fig:markers}.
+  \item Each robot will be assigned a corner at the start of every match to indicate its starting area.
+        Corner starting areas are \SI{1000}{mm} $\pm$ \SI{50}{mm} square and will be marked by tape.
 \end{enumerate}
 
 \begin{figure}
@@ -28,57 +36,56 @@
   \label{fig:arena}
 \end{figure}
 
-\subsection{Containers}
+
+\begin{sidewaysfigure}
+  \centering
+  \includegraphics[scale=0.58]{fig-sidewall.pdf}
+  \caption{Layout of markers along each arena wall.}
+  \label{fig:sidewall}
+\end{sidewaysfigure}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{fig-markers.pdf}
+  \caption{Layout of markers on the arena walls.}
+  \label{fig:markers}
+\end{figure}
+
+\subsection{Tokens}
 \refstepcounter{SpecID}
-\label{spec:containers}
+\label{spec:tokens}
 
 \begin{enumerate}
-  \item Containers are cuboids with side length \SI{260}{mm}.
-  \item Containers are arranged as indicated in Figure~\ref{fig:arena}.
-  \item Each container is fitted with a non-directional radio beacon
-        which can be used to locate it. The beacon has an operational
-        range of \SI{2000}{mm}.
+  \item Tokens are cuboids with side length \SI{150}{mm} $\pm$ \SI{25}{mm}.
+  \item The exterior surface of a token has an AprilTag marker printed upon it. The marker is identical on all faces.
+  \item All tokens belonging to the same corner will have the same marker ID.
+  \item Tokens are arranged as indicated in Figure~\ref{fig:arena}.
 \end{enumerate}
 
-\subsection{Forklift}
+\begin{table}[t]
+      \centering
+      \begin{tabular}{lcc}
+            \toprule
+            \textbf{Item} & \textbf{Marker Numbers} & \textbf{Marker Size (mm)} \\
+            \midrule
+            Arena boundary & {} 0 -- 27 & 250 \\
+            Corner 0 tokens & 28 & 120 \\
+            Corner 1 tokens & 29 & 120 \\
+            Corner 2 tokens & 30 & 120 \\
+            Corner 3 tokens & 31 & 120 \\
+            \bottomrule
+      \end{tabular}
+      \caption{Marker types, and the corresponding IDs and sizes.}
+      \label{tab:markers}
+\end{table}
+
+\subsection{Markers}
 \refstepcounter{SpecID}
-\label{spec:forklift}
+\label{spec:marker}
 
 \begin{enumerate}
-  \item The forklift's footprint is a square with sides of length \SI{350}{mm}.
-  \item The forklift is equipped with the following sensors:
-  \begin{enumerate}
-    \item Magnetic compass.
-    \item Gyroscope.
-    \item Radio direction finder.
-    \item Bump sensor.
-    \item Ultrasonic distance sensor.
-  \end{enumerate}
-  \item The forklift is equipped with the following actuators:
-  \begin{enumerate}
-    \item Tank-steered driving wheels.
-    \item Front grabber.
-  \end{enumerate}
-\end{enumerate}
-
-\subsection{Crane}
-\refstepcounter{SpecID}
-\label{spec:crane}
-
-\begin{enumerate}
-  \item The crane is the full width of the ship, and \SI{100}{mm}
-        in both other dimensions.
-  \item The bottom of the crane gantry is raised from the ground by
-        \SI{1600}{mm}.
-  \item The crane is equipped with the following sensors:
-  \begin{enumerate}
-    \item Radio direction finder.
-    \item Bump sensor.
-    \item Ultrasonic distance sensor (mounted vertically).
-  \end{enumerate}
-  \item The crane is equipped with the following actuators:
-  \begin{enumerate}
-    \item Two-axis linear driving motor.
-    \item Lifter.
-  \end{enumerate}
+  \item A `marker' is a square fiducial marker that is a member of the AprilTag 36H11 marker set.
+  \item Every marker has a numeric identifier.
+  \item Marker IDs are assigned according to Table~\ref{tab:markers}.
 \end{enumerate}
