@@ -30,6 +30,9 @@ jobs:
         texlive-font-utils \
         inkscape
 
+    - name: Check Inkscape version
+      run: inkscape --version
+
     - name: Make PDF
       run: make
 
