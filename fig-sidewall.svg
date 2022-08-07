@@ -1142,35 +1142,6 @@
     <g
        id="g5576"
        transform="matrix(0,-1,1,0,-664.35448,1159.2385)">
-      <path
-         style="fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.3149606, 5.3149606;stroke-dashoffset:0"
-         d="m 921.25981,733.46455 0,70.86614"
-         id="path5566"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path5568"
-         d="m 1027.559,733.46455 0,70.86614"
-         style="fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5.3149606, 5.3149606;stroke-dashoffset:0" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path5570"
-         d="m 921.25985,751.18108 c 42.50679,0 63.79237,0 106.29915,0"
-         style="fill:none;stroke:#000000;stroke-width:1.77165353;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#Arrow1Lend-5);marker-mid:none;marker-end:url(#Arrow1Lstart-4)" />
-      <text
-         id="text5572"
-         y="744.09442"
-         x="934.16528"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-         xml:space="preserve"><tspan
-           style="font-size:20px;line-height:1.25"
-           y="744.09442"
-           x="934.16528"
-           id="tspan5574"
-           sodipodi:role="line">600±20</tspan></text>
     </g>
     <g
        transform="translate(-391.51986,-743.51735)"
