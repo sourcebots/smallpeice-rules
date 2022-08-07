@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="1040" height="1240"
+     width="740" height="830"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -69,7 +69,7 @@
 
       .dimension text {
         fill: #666;
-        font-size: 0.175px;
+        font-size: 0.15px;
       }
       .dimension text.above {
         text-anchor: middle;
@@ -100,7 +100,7 @@
       }
 
       .legend-label {
-        font-size: 0.2px;
+        font-size: 0.15px;
         text-anchor: start;
         dominant-baseline: middle;
       }
@@ -122,78 +122,62 @@
         <use xlink:href="#robot"/>
       </g>
     </g>
-    <rect width="0.15"
-          height="0.15"
-          x="-0.075"
-          y="-0.075"
+    <rect width="0.1"
+          height="0.1"
+          x="-0.05"
+          y="-0.05"
           id="token"/>
     <g id="token-group">
-      <use xlink:href="#token" transform="translate(-0.9357 0)"/>
+      <use xlink:href="#token" transform="translate(-0.5 0)"/>
       <use xlink:href="#token" transform="translate(0 0)"/>
-      <use xlink:href="#token" transform="translate(0.9357 0)"/>
+      <use xlink:href="#token" transform="translate(0.5 0)"/>
     </g>
-    <g id="token-corner" transform="translate(4.2 0.575)">
-        <use xlink:href="#token-group" transform="translate(-1.404 0)"/>
-        <use xlink:href="#token-group" transform="translate(-1.404  0) rotate(90 -2.2214 0)"/>
+    <g id="token-corner" transform="translate(0 0)">
+        <use xlink:href="#token-group" transform="translate(1.950 0.55)"/>
+        <use xlink:href="#token-group" transform="translate(0.55 1.950) rotate(90)"/>
     </g>
     <g id="scoring-zones">
       <!-- scoring zones -->
-      <rect width="6"
-            height="6"
-            x="-3"
-            y="-3"
+      <rect width="3"
+            height="3"
+            x="-1.5"
+            y="-1.5"
             class="scoring-zone"/>
-      <line x1="-1"
-            x2="-1"
-            y1="-3"
-            y2="3"
+      <line x1="-0.5"
+            x2="-0.5"
+            y1="-1.5"
+            y2="1.5"
             class="scoring-zone"/>
-      <line x1="1"
-            x2="1"
-            y1="-3"
-            y2="3"
+      <line x1="0.5"
+            x2="0.5"
+            y1="-1.5"
+            y2="1.5"
             class="scoring-zone"/>
-      <line x1="-3"
-            x2="3"
-            y1="-1"
-            y2="-1"
+      <line x1="-1.5"
+            x2="1.5"
+            y1="-0.5"
+            y2="-0.5"
             class="scoring-zone"/>
-      <line x1="-3"
-            x2="3"
-            y1="1"
-            y2="1"
+      <line x1="-1.5"
+            x2="1.5"
+            y1="0.5"
+            y2="0.5"
             class="scoring-zone"/>
-      <g class="dimension" transform="translate(3 0)">
+      <g class="dimension" transform="translate(1.5 0)">
         <line x1="0" y1="0" x2="1.2" y2="0"/>
-        <text x="0.6" y="0.2" class="above">1200±100mm</text>
+        <text x="0.6" y="0.15" class="above">1200±100mm</text>
       </g>
-      <g class="dimension" transform="translate(1 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
+      <g class="dimension" transform="translate(-0.5 0)">
+        <line x1="0" y1="0" x2="1" y2="0"/>
+        <text x="0.5" y="0.2" class="above">1000±100mm</text>
       </g>
-      <g class="dimension" transform="translate(-1 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
+      <g class="dimension" transform="translate(0 -1.5)">
+        <line x1="0" y1="0" x2="0" y2="1"/>
+        <text x="-0.5" y="0.2" class="left-rotated">1000±100mm</text>
       </g>
-      <g class="dimension" transform="translate(-3 0)">
-        <line x1="0" y1="0" x2="2" y2="0"/>
-        <text x="1" y="0.2" class="above">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(0 -3)">
-        <line x1="0" y1="0" x2="0" y2="2"/>
-        <text x="-1" y="0.2" class="left-rotated">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(0 1)">
-        <line x1="0" y1="0" x2="0" y2="2"/>
-        <text x="-1" y="0.2" class="left-rotated">2000±100mm</text>
-      </g>
-      <g class="dimension" transform="translate(-3 3.1)">
-        <line x1="0" y1="0" x2="6" y2="0"/>
-        <text x="3" y="0.2" class="above">6000±200mm</text>
-      </g>
-      <g class="dimension" transform="translate(-3.1 -3)">
-        <line x1="0" y1="0" x2="0" y2="6"/>
-        <text x="-3" y="-0.1" class="left-rotated">6000±200mm</text>
+      <g class="dimension" transform="translate(-0.5 1.6)">
+        <line x1="-1" y1="0" x2="2" y2="0"/>
+        <text x="0.5" y="0.2" class="above">3000±300mm</text>
       </g>
     </g>
     <!-- arrow heads for dimensions -->
@@ -215,76 +199,73 @@
       transform="translate(1 1)">
       <!-- starting areas -->
       <use class="corner corner-0" xlink:href="#starting-area"/>
-      <use class="corner corner-1" xlink:href="#starting-area" transform="rotate(90 4.2 4.2)"/>
-      <use class="corner corner-2" xlink:href="#starting-area" transform="rotate(180 4.2 4.2)"/>
-      <use class="corner corner-3" xlink:href="#starting-area" transform="rotate(270 4.2 4.2)"/>
-      <g class="dimension" transform="translate(8.4 0) translate(-1 1.12)">
+      <use class="corner corner-1" xlink:href="#starting-area" transform="rotate(90 2.7 2.7)"/>
+      <use class="corner corner-2" xlink:href="#starting-area" transform="rotate(180 2.7 2.7)"/>
+      <use class="corner corner-3" xlink:href="#starting-area" transform="rotate(270 2.7 2.7)"/>
+      <g class="dimension" transform="translate(4.4 4.3)">
         <line x1="0" y1="0" x2="1" y2="0"/>
-        <text x="0.4" y="0.2" class="above">1000±50mm</text>
+        <text x="0.5" y="-0.07" class="above">1000±50mm</text>
       </g>
-      <g class="dimension" transform="translate(8.4 0) translate(-1.12 0)">
+      <g class="dimension" transform="translate(5.4 4.4) translate(-1.12 0)">
         <line x1="0" y1="1" x2="0" y2="0"/>
-        <text x="-0.6" y="-0.05" class="left-rotated">1000±50mm</text>
+        <text x="-0.5" y="-0.07" class="left-rotated">1000±50mm</text>
       </g>
       <!-- scoring zones -->
-      <use xlink:href="#scoring-zones" transform="translate(4.2 4.2)"/>
+      <use xlink:href="#scoring-zones" transform="translate(2.7 2.7)"/>
       <!-- tokens -->
       <use class="corner-0" xlink:href="#token-corner"/>
-      <use class="corner-1" xlink:href="#token-corner" transform="rotate(90 4.2 4.2)"/>
-      <use class="corner-2" xlink:href="#token-corner" transform="rotate(180 4.2 4.2)"/>
-      <use class="corner-3" xlink:href="#token-corner" transform="rotate(270 4.2 4.2)"/>
-      <g class="dimension" transform="translate(1 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <use class="corner-1" xlink:href="#token-corner" transform="rotate(90 2.7 2.7)"/>
+      <use class="corner-2" xlink:href="#token-corner" transform="rotate(180 2.7 2.7)"/>
+      <use class="corner-3" xlink:href="#token-corner" transform="rotate(270 2.7 2.7)"/>
+      <g class="dimension" transform="translate(3.5 0.55)">
+        <line x1="0" y1="0" x2="0.4" y2="0"/>
+        <text x="0.215" y="0.2" class="above">400±50mm</text>
       </g>
-      <g class="dimension" transform="translate(1 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <g class="dimension" transform="translate(2.5 0.55)">
+        <line x1="0" y1="0" x2="0.4" y2="0"/>
+        <text x="0.215" y="0.2" class="above">400±50mm</text>
       </g>
-      <g class="dimension" transform="translate(1.861 0)">
+      <g class="dimension" transform="translate(1.45 0)">
         <line x1="0" y1="0" x2="0" y2="0.5"/>
-        <text x="0.6" y="0.25" class="above">500±40mm</text>
+        <text x="0.5" y="0.35" class="above">500±40mm</text>
       </g>
-      <g class="dimension" transform="translate(2.871 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="0.2" class="above">780±40mm</text>
+      <g class="dimension" transform="translate(0.55 1)">
+        <line x1="0" y1="0" x2="0" y2="0.4"/>
+        <text x="0.45" y="0.17" class="above">500±40mm</text>
       </g>
-      <g class="dimension" transform="translate(3.81 0.575)">
-        <line x1="0" y1="0" x2="0.786" y2="0"/>
-        <text x="0.6" y="-0.1" class="above">780±40mm</text>
-      </g>
+      -->
       <!-- arena wall -->
-      <rect width="8.4"
-            height="8.4"
+      <rect width="5.4"
+            height="5.4"
             x="0"
             y="0"
             class="arena-wall"/>
-      <g class="dimension" transform="translate(4.2 -0.2)">
-        <line x1="-4.2" y1="0" x2="4.2" y2="0"/>
-        <text x="0" y="-0.075" class="above">8400±250mm</text>
+      <g class="dimension" transform="translate(2.7 -0.2)">
+        <line x1="-2.7" y1="0" x2="2.7" y2="0"/>
+        <text x="0" y="-0.075" class="above">5400±200mm</text>
       </g>
-      <g class="dimension" transform="translate(-0.2 4.2)">
-        <line x1="0" y1="-4.2" x2="0" y2="4.2"/>
-        <text x="0.03" y="-0.075" class="left-rotated">8400±250mm</text>
+      <g class="dimension" transform="translate(-0.2 2.7)">
+        <line x1="0" y1="-2.7" x2="0" y2="2.7"/>
+        <text x="0.03" y="-0.075" class="left-rotated">5400±200mm</text>
       </g>
     </g>
     <g id="legend"
-       transform="translate(2.2 10.8)">
+       transform="translate(1.35 7)">
       <g transform="translate(0 0)">
         <use fill="none" xlink:href="#starting-area" transform="scale(0.5) translate(-0.6 -0.6)"/>
-        <text x="0.5" y="0" class="legend-label">Robot starting area</text>
+        <text x="0.35" y="-0.05" class="legend-label">Robot starting area</text>
       </g>
-      <g transform="translate(0 0.75)">
+      <g transform="translate(0 0.65)">
         <use xlink:href="#token" transform="translate(0 -0.075)"/>
-        <text x="0.5" y="0" class="legend-label">Token starting position</text>
+        <text x="0.35" y="-0.05" class="legend-label">Token starting position</text>
       </g>
-      <g transform="translate(4.2 0)">
+      <g transform="translate(3.5 0)">
         <rect width="0.7"
               height="0.7"
               x="-0.55"
               y="-0.5"
               class="scoring-zone" transform="scale(0.5)"/>
-        <text x="0.5" y="0" class="legend-label">Scoring zone</text>
+        <text x="0.3" y="-0.05" class="legend-label">Scoring zone</text>
       </g>
     </g>
   </g>
