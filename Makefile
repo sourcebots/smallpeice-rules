@@ -10,7 +10,7 @@ clean:
 
 fig-%.pdf: fig-%.svg
 ifeq ($(COMPILESVG),inkscape)
-	inkscape --export-pdf=`pwd`/$@ `pwd`/$<
+	inkscape --export-filename=$@ $<
 else
 ifeq ($(COMPILESVG),svg2pdf)
 	svg2pdf $< $@
