@@ -1423,18 +1423,6 @@
          x="313.00793"
          y="103.84675">Corner 0</tspan></text>
     <text
-       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
-       sodipodi:linespacing="125%"
-       id="text5214"
-       y="-692.50714"
-       x="279.03104"
-       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       xml:space="preserve"><tspan
-         y="-692.50714"
-         x="279.03104"
-         id="tspan5216"
-         sodipodi:role="line">Corner 1</tspan></text>
-    <text
        xml:space="preserve"
        style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        x="315.51343"
@@ -1445,18 +1433,6 @@
          sodipodi:role="line"
          id="tspan5220"
          x="315.51343"
-         y="682.61652">Corner 2</tspan></text>
-    <text
-       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"
-       sodipodi:linespacing="125%"
-       id="text5222"
-       y="-111.23194"
-       x="279.03104"
-       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       xml:space="preserve"><tspan
-         y="-111.23194"
-         x="279.03104"
-         id="tspan5224"
-         sodipodi:role="line">Corner 3</tspan></text>
+         y="682.61652">Corner 1</tspan></text>
   </g>
 </svg>
