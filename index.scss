@@ -4,6 +4,11 @@ html, body {
     font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    // Increase the font size slightly on desktop, but leaving it as-is for print
+    @media screen {
+        font-size: 18px;
+    }
 }
 
 header {
@@ -47,7 +52,7 @@ header {
 }
 
 .fixed-width {
-    max-width: 780px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 10px;
 }
