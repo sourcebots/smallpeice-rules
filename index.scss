@@ -1,0 +1,107 @@
+$primary: #4b35b3;
+
+html, body {
+    font-family: "Open Sans", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0.5em 0;
+    background-color: $primary;
+    color: white;
+
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    @media print {
+        a:first-of-type {
+            // Invert colour so it appears nicely on a white background
+            filter: invert(1);
+        }
+    }
+}
+
+#logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @extend .fixed-width;
+
+    img {
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        margin: 1em 5%;
+    }
+}
+
+.fixed-width {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+section {
+    padding: 0.5em 10px 2em;
+    background-color: white;
+
+    &:nth-of-type(2n) {
+        background-color: #f5f3f4;
+    }
+}
+
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 2em 1em;
+    font-size: 80%;
+
+    p {
+        margin: 0;
+    }
+}
+
+h2, h3, h4, h5, h6 {
+    color: $primary;
+}
+
+a {
+    color: $primary;
+
+}
+
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    thead {
+        color: $primary;
+    }
+
+    th {
+        border-bottom: 2px solid $primary;
+        text-align: left;
+    }
+
+    th, td {
+        padding: 0.5em;
+    }
+}
+
+img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}

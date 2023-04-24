@@ -1,19 +1,14 @@
 Smallpeice Rules
 ================
 
-[![CircleCI](https://circleci.com/gh/sourcebots/smallpeice-rules.svg?style=svg)](https://circleci.com/gh/sourcebots/smallpeice-rules)
-
 `master` is the latest version.
 
 See `releases` or `tags` for individual years.
 
-
 Requirements
 ------------
 
-- GNU Make
-- Inkscape or `svg2pdf`
-- `pdflatex`
+- `npm`
 
 How to build
 ------------
@@ -22,4 +17,5 @@ How to build
 - Initialise Submodules
   - `git submodule init`
   - `git submodule update`
-- `make`
+- `npm ci`
+- `npm run build`
