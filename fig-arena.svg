@@ -38,7 +38,7 @@
           stroke-width: 0.02;
       }
 
-      .track-boundary {
+      .scoring-line {
           stroke: #333;
           stroke-width: 0.02;
           /*stroke-dasharray: 0.14142135, 0.14142135;*/
@@ -76,17 +76,17 @@
     <g id="side-zone">
 
       <!-- passing lines -->
-      <line class="track-boundary"
+      <line class="scoring-line"
             x1="1.56"
             y1="0"
             x2="1.56"
             y2="1.56" />
-      <line class="track-boundary"
+      <line class="scoring-line"
             x1="6.5"
             y1="4"
             x2="8"
             y2="4"/>
-      <line class="track-boundary"
+      <line class="scoring-line"
             x1="4"
             y1="1.56"
             x2="5.56"
@@ -172,7 +172,7 @@
        y="3.8"
        x="1.4">Marker</text>
 
-    <line class="track-boundary"
+    <line class="scoring-line"
             x1="7"
             y1="0.5"
             x2="7"
@@ -180,7 +180,7 @@
     <text
        class="legend-label"
        y="1"
-       x="7.7">Track Boundary</text>
+       x="7.7">Scoring Line</text>
 
     <rect width="0.5"
             height="1"
