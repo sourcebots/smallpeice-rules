@@ -5,6 +5,7 @@ html, body {
     font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: initial !important; // Override normalize.css
 
     // Increase the font size slightly on desktop, but leaving it as-is for print
     @media screen {
@@ -61,7 +62,7 @@ section#logos {
 }
 
 section {
-    padding: 0.5em calc((100vw - $content-width) / 2);
+    padding: 0.75em calc((100vw - $content-width) / 2);
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -85,6 +86,7 @@ footer {
 
 h2, h3, h4, h5, h6 {
     color: $primary;
+    margin: 12px 0;
 }
 
 a {
