@@ -157,7 +157,7 @@
           <tbody>
             <tr>
               <td>Arena boundary</td>
-              <td>0 - 27</td>
+              <td>0 - 7</td>
               <td>200</td>
             </tr>
           </tbody>
@@ -165,14 +165,15 @@
         <p>
           Two sets of marker codes will be used: one for development purposes, and one for the competition itself. The competition set is only to be used inside the SourceBots arena at the SourceBots competition. This is so that people carrying markers past the arena do not confuse robots. The competition codes are 100 above the development codes. When run in competition mode, the software provided by SourceBots will subtract 100 from the detected marker codes, as well as ignore the development codes. Markers outside of the ranges used in the game will also be ignored.
         </p>
-        <img src="./fig-sidewall.svg" alt="Sidewall diagram" width="100%" height="auto">
         <p>
           The markers can be printed on a black-and-white printer.
         </p>
         <p>
-          Twenty eight arena wall markers are positioned around the perimeter of the arena with the marker codes incrementing in a clockwise fashion. The corners are counted in a clockwise fashion, with corner 0 being the corner closest to arena marker 0.
+          Eight arena wall markers are positioned around the perimeter of the arena with the marker codes incrementing in an anti-clockwise fashion, starting with the top-left most marker.
         </p>
-        <img src="./fig-markers.svg" alt="Diagram of arena markers" width="50%" height="auto">
+        <p>
+          Wall markers are placed such that the bottom of the marker is 50 ±5mm from the arena floor.
+        </p>
         <h3><a class="anchor" id="arena-specification"></a>Arena</h3>
         <img src="./fig-arena.svg" alt="Arena diagram" width="100%" height="auto">
         <ol>
@@ -185,6 +186,8 @@
             The perimeter of the arena floor is delimited by the arena wall, which has a minimum height of 100mm.
           <li>
             Starting areas are 1000 ±50mm squares and will be marked by tape which is considered part of the scoring zone.
+          <li>
+            Starting area 0 is at the top of the arena diagram, and area 1 is at the bottom.
           <li>
             The green boxes denote the robot start locations. Robots may start anywhere inside their starting area facing any direction.
           <li>

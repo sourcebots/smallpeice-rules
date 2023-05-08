@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="1000" height="1250"
+     width="1000" height="1340"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -39,13 +39,18 @@
           stroke-width: 0.02;
       }
 
-      .zone-boundary {
+      .track-boundary {
           stroke: #333;
           stroke-width: 0.02;
           /*stroke-dasharray: 0.14142135, 0.14142135;*/
           stroke-dasharray: 0.08 0.08;
           stroke-dashoffset: -50%;
           fill: none;
+      }
+
+      .marker {
+          stroke: red;
+          stroke-width: 0.04;
       }
 
       .start-zone {
@@ -65,23 +70,24 @@
   <!-- common patterns -->
   <defs>
     <circle cx="0" cy="0" r="0.07" id="can" />
+    <line x1="-0.1" y1="0" x2="0.1" y2="0" id="marker"/>
     <rect width="0.5" height="0.3"
           x="-0.25" y="-0.15"
           id="robot"/>
     <g id="side-zone">
 
       <!-- passing lines -->
-      <line class="zone-boundary"
+      <line class="track-boundary"
             x1="1.56"
             y1="0"
             x2="1.56"
             y2="1.56" />
-      <line class="zone-boundary"
+      <line class="track-boundary"
             x1="6.5"
             y1="4"
             x2="8"
             y2="4"/>
-      <line class="zone-boundary"
+      <line class="track-boundary"
             x1="4"
             y1="1.56"
             x2="5.56"
@@ -121,6 +127,11 @@
             x="6.78"
             y="0"
             class="inner-wall"/>
+      <!-- Markers -->
+      <use xlink:href="#marker" transform="translate(0.02 0.78) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(7.22 2.46)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(3.98 4.78) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(3.22 7.98)" class="marker"/>
     </g>
   </defs>
   <!-- white background -->
@@ -156,7 +167,13 @@
        y="2.4"
        x="1.4">Can</text>
 
-    <line class="zone-boundary"
+    <use xlink:href="#marker" transform="translate(0.5 3.8) scale(2) rotate(90)" class="marker"/>
+    <text
+       class="legend-label"
+       y="3.8"
+       x="1.4">Marker</text>
+
+    <line class="track-boundary"
             x1="7"
             y1="0.5"
             x2="7"
