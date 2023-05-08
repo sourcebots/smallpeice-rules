@@ -1,4 +1,5 @@
 $primary: #4b35b3;
+$content-width: 900px;
 
 html, body {
     font-family: "Open Sans", Arial, sans-serif;
@@ -39,12 +40,10 @@ header {
     }
 }
 
-#logos {
-    display: flex;
+section#logos {
     align-items: center;
     justify-content: space-between;
-
-    @extend .fixed-width;
+    flex-direction: initial;
 
     img {
         display: block;
@@ -61,15 +60,11 @@ header {
     }
 }
 
-.fixed-width {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
 section {
-    padding: 0.5em 10px 2em;
+    padding: 0.5em calc((100vw - $content-width) / 2);
     background-color: white;
+    display: flex;
+    flex-direction: column;
 
     &:nth-of-type(2n) {
         background-color: #f5f3f4;
@@ -81,6 +76,7 @@ footer {
     color: white;
     padding: 2em 1em;
     font-size: 80%;
+    text-align: center;
 
     p {
         margin: 0;
@@ -116,7 +112,6 @@ table {
 }
 
 img {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
