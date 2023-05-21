@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="850" height="1200"
+     width="590" height="910"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -59,7 +59,7 @@
       }
 
       .legend-label {
-        font-size: 0.25px;
+        font-size: 0.2px;
         text-anchor: start;
         dominant-baseline: central;
       }
@@ -77,60 +77,55 @@
 
       <!-- passing lines -->
       <line class="scoring-line"
-            x1="1.56"
+            x1="2.7"
             y1="0"
-            x2="1.56"
-            y2="1.56" />
+            x2="2.7"
+            y2="1.48" />
       <line class="scoring-line"
-            x1="6.5"
-            y1="4"
-            x2="8"
-            y2="4"/>
+            x1="0"
+            y1="2.7"
+            x2="1.48"
+            y2="2.7" />
       <line class="scoring-line"
-            x1="4"
-            y1="1.56"
-            x2="5.56"
-            y2="1.56"/>
+            x1="1.22"
+            y1="1.22"
+            x2="2.7"
+            y2="2.7" />
       <!-- Start zone -->
       <rect width="1"
             height="1"
-            x="1.56"
-            y="0.28"
+            x="2.71"
+            y="0.24"
             class="start-zone"/>
-      <g transform="translate(2.06 0.78)">
+      <g transform="translate(3.21 0.74)">
         <use xlink:href="#robot"/>
       </g>
+
       <!-- cans -->
-      <use xlink:href="#can" transform="translate(0.39 0.78)" class="can"/>
-      <use xlink:href="#can" transform="translate(1.17 3.7)" class="can"/>
-      <use xlink:href="#can" transform="translate(4.78 2)" class="can"/>
+      <use xlink:href="#can" transform="translate(4.66 1.48)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.22 1.48)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.31 0.1)" class="can"/>
+
       <!-- Inner wall -->
       <rect width="1.22"
-            height="2.44"
-            x="1.56"
-            y="1.56"
+            height="1.22"
+            x="1.48"
+            y="2.7"
             class="inner-wall"/>
+      <!-- Outer square wall -->
       <rect width="1.22"
-            height="2.44"
-            x="2.78"
-            y="1.56"
-            class="inner-wall"/>
-      <!-- Wall block -->
-      <rect width="1.22"
-            height="2.44"
-            x="5.56"
+            height="1.22"
+            x="0"
             y="0"
             class="inner-wall"/>
-      <rect width="1.22"
-            height="2.44"
-            x="6.78"
-            y="0"
-            class="inner-wall"/>
+      <!-- Outer wall triangle -->
+      <polygon points="5.4,0 4.18,0 5.4,1.22" class="inner-wall" />
+
       <!-- Markers -->
-      <use xlink:href="#marker" transform="translate(0.02 0.78) rotate(90)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(7.22 2.46)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(3.98 4.78) rotate(90)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(3.22 7.98)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(1.24 0.61) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(2.09 2.69)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(0.02 2) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(4.80 0.66) rotate(45)" class="marker"/>
     </g>
   </defs>
   <!-- white background -->
@@ -140,15 +135,15 @@
      transform="translate(25 25) scale(100)">
     <!-- zones -->
     <use xlink:href="#side-zone"/>
-    <use xlink:href="#side-zone" transform="rotate(180 4 4)"/>
+    <use xlink:href="#side-zone" transform="rotate(180 2.7 2.7)"/>
     <!-- arena wall -->
-    <rect width="8"
-          height="8"
+    <rect width="5.4"
+          height="5.4"
           x="0"
           y="0"
           class="arena-wall"/>
   </g>
-  <g id="legend" transform="translate(50 850) scale(75)">
+  <g id="legend" transform="translate(35 600) scale(75)">
     <rect width="1"
             height="1"
             x="0"
@@ -158,38 +153,38 @@
     <text
        class="legend-label"
        y="1"
-       x="1.4">Robot starting area</text>
+       x="1.2">Robot starting area</text>
 
-    <use xlink:href="#can" transform="translate(0.5 2.4) scale(2)" class="can"/>
+    <use xlink:href="#can" transform="translate(0.5 2.2) scale(2)" class="can"/>
     <text
        class="legend-label"
-       y="2.4"
-       x="1.4">Can</text>
+       y="2.2"
+       x="1.2">Can</text>
 
-    <use xlink:href="#marker" transform="translate(0.5 3.8) scale(2) rotate(90)" class="marker"/>
+    <use xlink:href="#marker" transform="translate(0.5 3.4) scale(2) rotate(90)" class="marker"/>
     <text
        class="legend-label"
-       y="3.8"
-       x="1.4">Marker</text>
+       y="3.4"
+       x="1.2">Marker</text>
 
     <line class="scoring-line"
-            x1="7"
+            x1="4.75"
             y1="0.5"
-            x2="7"
+            x2="4.75"
             y2="1.5" />
     <text
        class="legend-label"
        y="1"
-       x="7.7">Scoring Line</text>
+       x="5.2">Scoring Line</text>
 
     <rect width="0.5"
             height="1"
-            x="6.75"
-            y="1.9"
+            x="4.5"
+            y="1.7"
             class="inner-wall"/>
     <text
        class="legend-label"
-       y="2.4"
-       x="7.7">Inner wall</text>
+       y="2.2"
+       x="5.2">Inner wall</text>
   </g>
 </svg>
