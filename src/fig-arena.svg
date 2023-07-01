@@ -3,7 +3,7 @@
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1"
      baseProfile="full"
-     width="590" height="910"
+     width="600" height="880"
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
@@ -40,9 +40,9 @@
 
       .scoring-line {
           stroke: #333;
-          stroke-width: 0.02;
+          stroke-width: 0.015;
           /*stroke-dasharray: 0.14142135, 0.14142135;*/
-          stroke-dasharray: 0.08 0.08;
+          stroke-dasharray: 0.06 0.06;
           stroke-dashoffset: -50%;
           fill: none;
       }
@@ -65,17 +65,76 @@
       }
 
       .marker-label {
-        font-size: 0.15px;
+        font-size: 0.12px;
         text-anchor: central;
         dominant-baseline: central;
         fill: red;
         font-family: monospace;
       }
 
+      /*.dimension {
+         display: none;
+      }*/
+      line.dimension {
+        stroke: #333;
+        stroke-width: 0.005;
+        marker-start: url(#dimension-arrow-head-start);
+        marker-end: url(#dimension-arrow-head-end);
+      }
+
+      text.dimension {
+        fill: #333;
+        font-size: 0.11px;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .dimension-arrow-head {
+        fill: #333;
+      }
+      .dimension-guide {
+        stroke: #777;
+        stroke-width: 0.01;
+        stroke-dasharray: 0.0025 0.03;
+        stroke-linecap: round;
+        fill: none;
+      }
+
     ]]>
   </style>
   <!-- common patterns -->
   <defs>
+    <g
+      transform="scale(0.05)"
+      id="dimension-arrow-head">
+      <path
+         id="path218"
+         class="dimension-arrow-head"
+         d="M0,0 L1,1 L1,-1 L0,0" />
+    </g>
+    <marker
+       markerUnits="userSpaceOnUse"
+       refY="1"
+       refX="0"
+       markerHeight="2"
+       markerWidth="1"
+       orient="auto"
+       id="dimension-arrow-head-start">
+      <use
+         transform="translate(0,1)"
+         xlink:href="#dimension-arrow-head" />
+    </marker>
+    <marker
+       markerUnits="userSpaceOnUse"
+       refY="1"
+       refX="1"
+       markerHeight="2"
+       markerWidth="1"
+       orient="auto"
+       id="dimension-arrow-head-end">
+      <use
+         transform="matrix(-1,0,0,1,1,1)"
+         xlink:href="#dimension-arrow-head" />
+    </marker>
     <circle cx="0" cy="0" r="0.07" id="can" />
     <line x1="-0.05" y1="0" x2="0.05" y2="0" id="marker"/>
     <rect width="0.5" height="0.3"
@@ -141,7 +200,7 @@
   <rect width="100%" height="100%" fill="white"/>
   <!-- transform for arena-space coordinates -->
   <g id="arena"
-     transform="translate(25 25) scale(100)">
+     transform="translate(25 30) scale(100)">
     <!-- zones -->
     <use xlink:href="#side-zone"/>
     <use xlink:href="#side-zone" transform="rotate(180 2.7 2.7)"/>
@@ -161,8 +220,43 @@
     <text class="marker-label" y="3.42" x="5.22">2</text>
     <text class="marker-label" y="4.7" x="0.65">3</text>
     <text class="marker-label" y="0.7" x="4.65">3</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="1.28" x2="1.22" y2="1.28" class="dimension" />
+    <text class="dimension" y="1.37" x="0.61">1200±100mm</text>
+
+    <line x1="1.48" y1="0" x2="1.48" y2="1.22" class="dimension" />
+    <line x1="1.22" y1="1.22" x2="1.48" y2="1.22" class="dimension-guide" />
+    <text class="dimension" transform="rotate(-90, 1.55 0.61)" y="0.61" x="1.55">1200±100mm</text>
+
+    <line x1="0" y1="3.9" x2="1.48" y2="3.9" class="dimension" />
+    <text class="dimension" y="3.82" x="0.78">1500±100mm</text>
+
+    <line x1="4.18" y1="-0.06" x2="5.4" y2="-0.06" class="dimension" />
+    <text class="dimension" y="-0.13" x="4.79">1200±100mm</text>
+
+    <line x1="4.18" y1="3.92" x2="5.4" y2="3.92" class="dimension" />
+    <text class="dimension" y="3.85" x="4.79">1200±100mm</text>
+
+    <line x1="3.8" y1="5.4" x2="3.8" y2="3.92" class="dimension" />
+    <line x1="3.8" y1="3.92" x2="4.18" y2="3.92" class="dimension-guide" />
+    <text class="dimension" transform="rotate(90, 3.7 4.66)" y="4.66" x="3.7">1400±100mm</text>
+
+    <line x1="2.7" y1="3.3" x2="3.01" y2="3.3" class="dimension" />
+    <line x1="3.01" y1="3.3" x2="3.01" y2="2.77" class="dimension-guide" />
+    <text class="dimension" y="3.4" x="3.02">300±20mm</text>
+
+    <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
+    <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
+
+    <line x1="0" y1="5.5" x2="5.4" y2="5.5" class="dimension" />
+    <text class="dimension" y="5.6" x="2.7">5400±100mm</text>
+
+    <line x1="5.5" y1="0" x2="5.5" y2="5.4" class="dimension" />
+    <text class="dimension" transform="rotate(-90, 5.6 2.7)" y="2.7" x="5.6">5400±100mm</text>
+
   </g>
-  <g id="legend" transform="translate(35 600) scale(75)">
+  <g id="legend" transform="translate(35 580) scale(75)">
     <rect width="1"
             height="1"
             x="0"
