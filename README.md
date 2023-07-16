@@ -14,8 +14,5 @@ How to build
 ------------
 
 - Clone.
-- Initialise Submodules
-  - `git submodule init`
-  - `git submodule update`
 - `npm ci`
 - `npm run build`
