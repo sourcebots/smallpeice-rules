@@ -306,7 +306,7 @@
     <text
        class="legend-label"
        y="3.4"
-       x="1.2">Marker (with id)</text>
+       x="1.2">Marker (with ID)</text>
 
     <line class="scoring-line"
             x1="4.75"
