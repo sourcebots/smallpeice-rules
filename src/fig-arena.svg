@@ -1,0 +1,331 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C/DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+     baseProfile="full"
+     width="600" height="880"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style type="text/css">
+    <![CDATA[
+      .arena-wall {
+          fill: none;
+          stroke: #555;
+          stroke-width: .02;
+      }
+
+      .inner-wall {
+          fill: #bbb;
+          stroke: #555;
+          stroke-width: .02;
+      }
+
+      .arena-wall {
+          fill: none;
+          stroke: #555;
+          stroke-width: .02;
+      }
+
+      .can {
+          stroke: black;
+          stroke-width: 0.01;
+          fill: silver;
+      }
+
+      #robot {
+          fill: green;
+          stroke: black;
+          stroke-width: 0.02;
+      }
+
+      .scoring-line {
+          stroke: #333;
+          stroke-width: 0.015;
+          /*stroke-dasharray: 0.14142135, 0.14142135;*/
+          stroke-dasharray: 0.06 0.06;
+          stroke-dashoffset: -50%;
+          fill: none;
+      }
+
+      .marker {
+          stroke: red;
+          stroke-width: 0.04;
+      }
+
+      .start-zone {
+        stroke: #bbb;
+        stroke-width: 0.02;
+        fill: #ffd;
+      }
+
+      .legend-label {
+        font-size: 0.2px;
+        text-anchor: start;
+        dominant-baseline: central;
+      }
+
+      .marker-label {
+        font-size: 0.12px;
+        text-anchor: central;
+        dominant-baseline: central;
+        fill: red;
+        font-family: monospace;
+      }
+
+      /*.dimension, .dimension-guide, .marker-label {
+         display: none;
+      }*/
+      line.dimension {
+        stroke: #333;
+        stroke-width: 0.005;
+        marker-start: url(#dimension-arrow-head-start);
+        marker-end: url(#dimension-arrow-head-end);
+      }
+
+      text.dimension {
+        fill: #333;
+        font-size: 0.11px;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .dimension-arrow-head {
+        fill: #333;
+      }
+      .dimension-guide {
+        stroke: #777;
+        stroke-width: 0.01;
+        stroke-dasharray: 0.0025 0.03;
+        stroke-linecap: round;
+        fill: none;
+      }
+
+    ]]>
+  </style>
+  <!-- common patterns -->
+  <defs>
+    <g
+      transform="scale(0.05)"
+      id="dimension-arrow-head">
+      <path
+         id="path218"
+         class="dimension-arrow-head"
+         d="M0,0 L1,1 L1,-1 L0,0" />
+    </g>
+    <marker
+       markerUnits="userSpaceOnUse"
+       refY="1"
+       refX="0"
+       markerHeight="2"
+       markerWidth="1"
+       orient="auto"
+       id="dimension-arrow-head-start">
+      <use
+         transform="translate(0,1)"
+         xlink:href="#dimension-arrow-head" />
+    </marker>
+    <marker
+       markerUnits="userSpaceOnUse"
+       refY="1"
+       refX="1"
+       markerHeight="2"
+       markerWidth="1"
+       orient="auto"
+       id="dimension-arrow-head-end">
+      <use
+         transform="matrix(-1,0,0,1,1,1)"
+         xlink:href="#dimension-arrow-head" />
+    </marker>
+    <circle cx="0" cy="0" r="0.07" id="can" />
+    <line x1="-0.05" y1="0" x2="0.05" y2="0" id="marker"/>
+    <rect width="0.5" height="0.3"
+          x="-0.25" y="-0.15"
+          id="robot"/>
+    <g id="side-zone">
+
+      <!-- passing lines -->
+      <line class="scoring-line"
+            x1="2.7"
+            y1="0"
+            x2="2.7"
+            y2="1.48" />
+      <line class="scoring-line"
+            x1="0"
+            y1="2.7"
+            x2="1.48"
+            y2="2.7" />
+      <line class="scoring-line"
+            x1="1.22"
+            y1="1.22"
+            x2="2.7"
+            y2="2.7" />
+      <!-- Start zone -->
+      <rect width="1"
+            height="1"
+            x="2.71"
+            y="0.24"
+            class="start-zone"/>
+      <g transform="translate(3.21 0.74)">
+        <use xlink:href="#robot"/>
+      </g>
+
+      <!-- cans -->
+      <use xlink:href="#can" transform="translate(4.18 1.22)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.22 1.48)" class="can"/>
+      <use xlink:href="#can" transform="translate(2.39 2.62)" class="can"/>
+      <use xlink:href="#can" transform="translate(0.07 2.77)" class="can"/>
+
+      <!-- Inner wall -->
+      <rect width="1.22"
+            height="1.22"
+            x="1.48"
+            y="2.7"
+            class="inner-wall"/>
+      <!-- Outer square wall -->
+      <rect width="1.22"
+            height="1.22"
+            x="0"
+            y="0"
+            class="inner-wall"/>
+      <!-- Outer wall triangle -->
+      <polygon points="5.4,0 4.18,0 5.4,1.22" class="inner-wall" />
+
+      <!-- Markers -->
+      <use xlink:href="#marker" transform="translate(1.24 0.51) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(1.24 0.71) rotate(90)" class="marker"/>
+
+      <use xlink:href="#marker" transform="translate(2.19 2.69)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(1.99 2.69)" class="marker"/>
+
+      <use xlink:href="#marker" transform="translate(0.02 2.1) rotate(90)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(0.02 1.9) rotate(90)" class="marker"/>
+
+      <use xlink:href="#marker" transform="translate(4.87 0.73) rotate(45)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(4.73 0.59) rotate(45)" class="marker"/>
+    </g>
+  </defs>
+  <!-- white background -->
+  <rect width="100%" height="100%" fill="white"/>
+  <!-- transform for arena-space coordinates -->
+  <g id="arena"
+     transform="translate(25 30) scale(100)">
+    <!-- zones -->
+    <use xlink:href="#side-zone"/>
+    <use xlink:href="#side-zone" transform="rotate(180 2.7 2.7)"/>
+    <!-- arena wall -->
+    <rect width="5.4"
+          height="5.4"
+          x="0"
+          y="0"
+          class="arena-wall"/>
+
+    <!-- Marker labels -->
+    <text class="marker-label" y="0.51" x="1.3">0</text>
+    <text class="marker-label" y="0.71" x="1.3">1</text>
+
+    <text class="marker-label" y="4.9" x="4">0</text>
+    <text class="marker-label" y="4.7" x="4">1</text>
+
+    <text class="marker-label" y="2.58" x="2.15">2</text>
+    <text class="marker-label" y="2.58" x="1.95">3</text>
+
+    <text class="marker-label" y="2.85" x="3.16">2</text>
+    <text class="marker-label" y="2.85" x="3.36">3</text>
+
+    <text class="marker-label" y="1.9" x="0.1">4</text>
+    <text class="marker-label" y="2.1" x="0.1">5</text>
+
+    <text class="marker-label" y="3.52" x="5.22">4</text>
+    <text class="marker-label" y="3.32" x="5.22">5</text>
+
+    <text class="marker-label" y="4.63" x="0.58">6</text>
+    <text class="marker-label" y="4.77" x="0.73">7</text>
+
+    <text class="marker-label" y="0.77" x="4.72">6</text>
+    <text class="marker-label" y="0.63" x="4.58">7</text>
+
+    <!-- Dimensions -->
+    <line x1="0" y1="1.28" x2="1.22" y2="1.28" class="dimension" />
+    <text class="dimension" y="1.37" x="0.61">1200±100mm</text>
+
+    <line x1="1.48" y1="0" x2="1.48" y2="1.22" class="dimension" />
+    <line x1="1.22" y1="1.22" x2="1.48" y2="1.22" class="dimension-guide" />
+    <text class="dimension" transform="rotate(-90, 1.55 0.61)" y="0.61" x="1.55">1200±100mm</text>
+
+    <line x1="0" y1="3.9" x2="1.48" y2="3.9" class="dimension" />
+    <text class="dimension" y="3.82" x="0.78">1500±100mm</text>
+
+    <line x1="4.18" y1="-0.06" x2="5.4" y2="-0.06" class="dimension" />
+    <text class="dimension" y="-0.13" x="4.79">1200±100mm</text>
+
+    <line x1="4.18" y1="3.92" x2="5.4" y2="3.92" class="dimension" />
+    <text class="dimension" y="3.85" x="4.79">1200±100mm</text>
+
+    <line x1="3.8" y1="5.4" x2="3.8" y2="3.92" class="dimension" />
+    <line x1="3.8" y1="3.92" x2="4.18" y2="3.92" class="dimension-guide" />
+    <text class="dimension" transform="rotate(90, 3.7 4.66)" y="4.66" x="3.7">1400±100mm</text>
+
+    <line x1="2.7" y1="3.3" x2="3.01" y2="3.3" class="dimension" />
+    <line x1="3.01" y1="3.3" x2="3.01" y2="2.77" class="dimension-guide" />
+    <text class="dimension" y="3.4" x="3.02">300±20mm</text>
+
+    <line x1="0.4" y1="1.9" x2="0.4" y2="2.1" class="dimension" />
+    <line x1="0" y1="1.9" x2="0.4" y2="1.9" class="dimension-guide" />
+    <line x1="0" y1="2.1" x2="0.4" y2="2.1" class="dimension-guide" />
+    <text class="dimension" y="2" x="0.7">20±5mm</text>
+
+    <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
+    <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
+
+    <line x1="0" y1="5.5" x2="5.4" y2="5.5" class="dimension" />
+    <text class="dimension" y="5.6" x="2.7">5400±100mm</text>
+
+    <line x1="5.5" y1="0" x2="5.5" y2="5.4" class="dimension" />
+    <text class="dimension" transform="rotate(-90, 5.6 2.7)" y="2.7" x="5.6">5400±100mm</text>
+
+  </g>
+  <g id="legend" transform="translate(35 580) scale(75)">
+    <rect width="1"
+            height="1"
+            x="0"
+            y="0.5"
+            class="start-zone"/>
+    <use x="0.5" y="1" xlink:href="#robot"/>
+    <text
+       class="legend-label"
+       y="1"
+       x="1.2">Robot starting area</text>
+
+    <use xlink:href="#can" transform="translate(0.5 2.2) scale(2)" class="can"/>
+    <text
+       class="legend-label"
+       y="2.2"
+       x="1.2">Can</text>
+
+    <use xlink:href="#marker" transform="translate(0.5 3.4) scale(2) rotate(90)" class="marker"/>
+    <text class="marker-label" y="3.4" x="0.7">2</text>
+    <text
+       class="legend-label"
+       y="3.4"
+       x="1.2">Marker (with ID)</text>
+
+    <line class="scoring-line"
+            x1="4.75"
+            y1="0.5"
+            x2="4.75"
+            y2="1.5" />
+    <text
+       class="legend-label"
+       y="1"
+       x="5.2">Scoring Line</text>
+
+    <rect width="0.5"
+            height="1"
+            x="4.5"
+            y="1.7"
+            class="inner-wall"/>
+    <text
+       class="legend-label"
+       y="2.2"
+       x="5.2">Inner wall</text>
+  </g>
+</svg>

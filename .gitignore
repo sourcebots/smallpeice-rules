@@ -1,10 +1,2 @@
-rules.pdf
-rules_printable.pdf
-rules.aux
-rules.log
-rules.out
-fig-arena.pdf
-fig-sidewall.pdf
-soton_logo-eps-converted-to.pdf
-fig-sourcebots.pdf
-fig-markers.pdf
+node_modules/
+dist/

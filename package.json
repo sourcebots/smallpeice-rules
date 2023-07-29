@@ -1,0 +1,29 @@
+{
+  "name": "smallpeice-rules",
+  "version": "1.0.0",
+  "description": "Smallpeice Rules",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "start": "vite dev",
+    "test": "npm run spell-check",
+    "spell-check": "cspell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourcebots/smallpeice-rules.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/sourcebots/smallpeice-rules/issues"
+  },
+  "homepage": "https://github.com/sourcebots/smallpeice-rules#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.62.0",
+    "vite": "^4.3.1"
+  },
+  "devDependencies": {
+    "cspell": "^6.31.1"
+  }
+}
