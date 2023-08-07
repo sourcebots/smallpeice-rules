@@ -62,7 +62,7 @@ section#logos {
 }
 
 section {
-    padding: 0.75em calc((100vw - $content-width) / 2);
+    padding: 0.75em max(calc((100vw - $content-width) / 2), 1rem);
     background-color: white;
     display: flex;
     flex-direction: column;
