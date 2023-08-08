@@ -271,7 +271,7 @@
     <line x1="0.4" y1="1.9" x2="0.4" y2="2.1" class="dimension" />
     <line x1="0" y1="1.9" x2="0.4" y2="1.9" class="dimension-guide" />
     <line x1="0" y1="2.1" x2="0.4" y2="2.1" class="dimension-guide" />
-    <text class="dimension" y="2" x="0.7">20±5mm</text>
+    <text class="dimension" y="2" x="0.7">200±10mm</text>
 
     <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
     <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
