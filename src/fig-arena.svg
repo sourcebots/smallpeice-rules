@@ -275,7 +275,7 @@
     <line x1="3.46" y1="3" x2="3.92" y2="3" class="dimension" />
     <line x1="3.46" y1="3" x2="3.46" y2="2.7" class="dimension-guide" />
     <line x1="3.92" y1="3" x2="3.92" y2="2.7" class="dimension-guide" />
-    <text class="dimension" y="3.15" x="3.7">460±10mm</text>
+    <text class="dimension" y="3.15" x="3.7">450±10mm</text>
 
     <line x1="0.4" y1="1.9" x2="0.4" y2="2.1" class="dimension" />
     <line x1="0" y1="1.9" x2="0.4" y2="1.9" class="dimension-guide" />
@@ -284,7 +284,7 @@
 
     <line x1="0.25" y1="2.15" x2="0.25" y2="2.7" class="dimension" />
     <line x1="0" y1="2.15" x2="0.25" y2="2.15" class="dimension-guide" />
-    <text class="dimension" y="2.4" x="0.55">550±10mm</text>
+    <text class="dimension" y="2.4" x="0.55">560±10mm</text>
 
     <line x1="4.79" y1="0.61" x2="5.4" y2="0" class="dimension-guide" />
     <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
