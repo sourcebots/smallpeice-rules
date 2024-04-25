@@ -22,8 +22,8 @@
 
       .line-follow-guide {
           fill: none;
-          stroke: #AAA;
-          stroke-width: .01;
+          stroke: black;
+          stroke-width: .03;
       }
 
       .arena-wall {
