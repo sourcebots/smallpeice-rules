@@ -173,7 +173,7 @@
             class="start-zone"/>
 
       <!-- Line following guide -->
-      <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.6,1.96 0.6,3.92 1.36,4.66 1.68,4.66" class="line-follow-guide" />
+      <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.75,1.96 0.75,3.92 1.36,4.66 1.68,4.66" class="line-follow-guide" />
 
       <g transform="translate(3.21 0.74)">
         <use xlink:href="#robot"/>
