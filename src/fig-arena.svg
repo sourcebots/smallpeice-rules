@@ -23,7 +23,13 @@
       .line-follow-guide {
           fill: none;
           stroke: black;
-          stroke-width: .03;
+          stroke-width: .012;
+      }
+
+      .line-follow-guide-back {
+          fill: none;
+          stroke: white;
+          stroke-width: .05;
       }
 
       .arena-wall {
@@ -177,6 +183,7 @@
             class="start-zone"/>
 
       <!-- Line following guide -->
+      <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.75,1.96 0.75,3.92 1.5,4.66 1.68,4.66" class="line-follow-guide-back" />
       <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.75,1.96 0.75,3.92 1.5,4.66 1.68,4.66" class="line-follow-guide" />
 
       <g transform="translate(3.21 0.74)">
