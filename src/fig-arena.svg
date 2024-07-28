@@ -53,9 +53,6 @@
       .scoring-line {
           stroke: #333;
           stroke-width: 0.05;
-          /*stroke-dasharray: 0.14142135, 0.14142135;*/
-          stroke-dasharray: 0.05 0.03;
-          stroke-dashoffset: -50%;
           fill: none;
       }
 
