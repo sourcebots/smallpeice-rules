@@ -191,8 +191,8 @@
       <use xlink:href="#can" transform="translate(4.18 1.22)" class="can"/>
       <use xlink:href="#can" transform="translate(1.22 1.78)" class="can"/>
       <use xlink:href="#can" transform="translate(2.24 2.1)" class="can"/>
-      <use xlink:href="#can" transform="translate(0.37 2.77)" class="can"/>
-      <use xlink:href="#can" transform="translate(1.11 2.77)" class="can"/>
+      <use xlink:href="#can" transform="translate(0.37 2.81)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.11 2.62)" class="can"/>
 
       <!-- Inner wall -->
       <rect width="1.22"
@@ -307,11 +307,11 @@
     <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
 
     <line x1="5.03" y1="2.77" x2="5.4" y2="2.77" class="dimension" />
-    <line x1="5.03" y1="2.77" x2="5.03" y2="2.7" class="dimension-guide" />
+    <line x1="5.03" y1="2.77" x2="5.03" y2="2.68" class="dimension-guide" />
     <text class="dimension" y="2.9" x="5.05">370±100mm</text>
 
     <line x1="3.92" y1="2.5" x2="4.29" y2="2.5" class="dimension" />
-    <line x1="4.29" y1="2.5" x2="4.29" y2="2.56" class="dimension-guide" />
+    <line x1="4.29" y1="2.5" x2="4.29" y2="2.7" class="dimension-guide" />
     <text class="dimension" y="2.4" x="4.26">370±100mm</text>
 
     <line x1="0" y1="5.5" x2="5.4" y2="5.5" class="dimension" />
