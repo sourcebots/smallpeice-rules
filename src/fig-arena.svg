@@ -270,7 +270,7 @@
     <text class="dimension" transform="rotate(-90, 1.6 0.3)" y="0.3" x="1.6">610±10mm</text>
 
     <line x1="0" y1="3.9" x2="1.48" y2="3.9" class="dimension" />
-    <text class="dimension" y="3.82" x="0.78">1480±100mm</text>
+    <text class="dimension" y="3.82" x="0.39">1480±100mm</text>
 
     <line x1="4.18" y1="-0.06" x2="5.4" y2="-0.06" class="dimension" />
     <text class="dimension" y="-0.13" x="4.79">1220±100mm</text>
@@ -296,14 +296,14 @@
     <line x1="0.4" y1="1.885" x2="0.4" y2="2.035" class="dimension" />
     <line x1="0" y1="1.885" x2="0.4" y2="1.885" class="dimension-guide" />
     <line x1="0" y1="2.035" x2="0.4" y2="2.035" class="dimension-guide" />
-    <text class="dimension" y="1.96" x="0.75">150±10mm</text>
+    <text class="dimension" y="1.89" x="0.73">150±10mm</text>
 
     <line x1="0.25" y1="1.96" x2="0.25" y2="2.7" class="dimension" />
     <line x1="0" y1="1.96" x2="0.25" y2="1.96" class="dimension-guide" />
     <text class="dimension" y="2.4" x="0.55">740±10mm</text>
 
     <line x1="4.79" y1="0.61" x2="5.4" y2="0" class="dimension-guide" />
-    <text class="dimension" y="1.31" x="4.79">1220±100mm</text>
+    <text class="dimension" y="1.31" x="4.9">1220±100mm</text>
 
     <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
 
