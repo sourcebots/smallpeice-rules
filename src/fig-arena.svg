@@ -8,6 +8,9 @@
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
     <![CDATA[
+      svg {
+        font-family: "Open Sans", Arial, sans-serif;
+      }
       .arena-wall {
           fill: none;
           stroke: #555;
@@ -96,6 +99,7 @@
         font-size: 0.11px;
         text-anchor: middle;
         dominant-baseline: central;
+        font-family: monospace;
       }
       .dimension-arrow-head {
         fill: #333;
