@@ -8,6 +8,9 @@
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <style type="text/css">
     <![CDATA[
+      svg {
+        font-family: "Open Sans", Arial, sans-serif;
+      }
       .arena-wall {
           fill: none;
           stroke: #555;
@@ -18,6 +21,18 @@
           fill: #bbb;
           stroke: #555;
           stroke-width: .02;
+      }
+
+      .line-follow-guide {
+          fill: none;
+          stroke: black;
+          stroke-width: .012;
+      }
+
+      .line-follow-guide-back {
+          fill: none;
+          stroke: white;
+          stroke-width: .05;
       }
 
       .arena-wall {
@@ -40,14 +55,11 @@
 
       .scoring-line {
           stroke: #333;
-          stroke-width: 0.015;
-          /*stroke-dasharray: 0.14142135, 0.14142135;*/
-          stroke-dasharray: 0.06 0.06;
-          stroke-dashoffset: -50%;
+          stroke-width: 0.05;
           fill: none;
       }
 
-      .marker {
+      #marker {
           stroke: red;
           stroke-width: 0.04;
       }
@@ -87,6 +99,7 @@
         font-size: 0.11px;
         text-anchor: middle;
         dominant-baseline: central;
+        font-family: monospace;
       }
       .dimension-arrow-head {
         fill: #333;
@@ -140,39 +153,50 @@
     <rect width="0.5" height="0.3"
           x="-0.25" y="-0.15"
           id="robot"/>
+    <g id="marker-pair">
+      <use xlink:href="#marker" transform="translate(0.075)" class="marker"/>
+      <use xlink:href="#marker" transform="translate(-0.075)" class="marker"/>
+    </g>
     <g id="side-zone">
 
       <!-- passing lines -->
       <line class="scoring-line"
-            x1="2.7"
+            x1="2.715"
             y1="0"
-            x2="2.7"
+            x2="2.715"
             y2="1.48" />
       <line class="scoring-line"
             x1="0"
-            y1="2.7"
+            y1="2.715"
             x2="1.48"
-            y2="2.7" />
+            y2="2.715" />
       <line class="scoring-line"
             x1="1.22"
             y1="1.22"
             x2="2.7"
             y2="2.7" />
+
       <!-- Start zone -->
       <rect width="1"
             height="1"
             x="2.71"
             y="0.24"
             class="start-zone"/>
+
+      <!-- Line following guide -->
+      <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.75,1.96 0.75,3.92 1.5,4.66 1.68,4.66" class="line-follow-guide-back" />
+      <polyline points="3.72,0.74 1.96,0.74 1.96,1.96 0.75,1.96 0.75,3.92 1.5,4.66 1.68,4.66" class="line-follow-guide" />
+
       <g transform="translate(3.21 0.74)">
         <use xlink:href="#robot"/>
       </g>
 
       <!-- cans -->
       <use xlink:href="#can" transform="translate(4.18 1.22)" class="can"/>
-      <use xlink:href="#can" transform="translate(1.22 1.48)" class="can"/>
-      <use xlink:href="#can" transform="translate(2.39 2.62)" class="can"/>
-      <use xlink:href="#can" transform="translate(0.07 2.77)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.22 1.78)" class="can"/>
+      <use xlink:href="#can" transform="translate(2.24 2.1)" class="can"/>
+      <use xlink:href="#can" transform="translate(0.37 2.81)" class="can"/>
+      <use xlink:href="#can" transform="translate(1.11 2.62)" class="can"/>
 
       <!-- Inner wall -->
       <rect width="1.22"
@@ -190,17 +214,10 @@
       <polygon points="5.4,0 4.18,0 5.4,1.22" class="inner-wall" />
 
       <!-- Markers -->
-      <use xlink:href="#marker" transform="translate(1.24 0.51) rotate(90)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(1.24 0.71) rotate(90)" class="marker"/>
-
-      <use xlink:href="#marker" transform="translate(2.19 2.69)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(1.99 2.69)" class="marker"/>
-
-      <use xlink:href="#marker" transform="translate(0.02 2.1) rotate(90)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(0.02 1.9) rotate(90)" class="marker"/>
-
-      <use xlink:href="#marker" transform="translate(4.861 0.681) rotate(45)" class="marker"/>
-      <use xlink:href="#marker" transform="translate(4.721 0.539) rotate(45)" class="marker"/>
+      <use xlink:href="#marker-pair" transform="translate(1.24 0.61) rotate(90)" />
+      <use xlink:href="#marker-pair" transform="translate(2.09 2.69)" />
+      <use xlink:href="#marker-pair" transform="translate(0.02 1.96) rotate(90)" />
+      <use xlink:href="#marker-pair" transform="translate(4.79 0.61) rotate(45)" />
     </g>
   </defs>
   <!-- white background -->
@@ -219,78 +236,87 @@
           class="arena-wall"/>
 
     <!-- Marker labels -->
-    <text class="marker-label" y="0.51" x="1.3">0</text>
-    <text class="marker-label" y="0.71" x="1.3">1</text>
+    <text class="marker-label" y="0.54" x="1.3">0</text>
+    <text class="marker-label" y="0.69" x="1.3">1</text>
 
-    <text class="marker-label" y="4.9" x="4">0</text>
-    <text class="marker-label" y="4.7" x="4">1</text>
+    <text class="marker-label" y="4.87" x="4">0</text>
+    <text class="marker-label" y="4.72" x="4">1</text>
 
-    <text class="marker-label" y="2.58" x="2.15">2</text>
-    <text class="marker-label" y="2.58" x="1.95">3</text>
+    <text class="marker-label" y="2.58" x="2.13">2</text>
+    <text class="marker-label" y="2.58" x="1.98">3</text>
 
-    <text class="marker-label" y="2.85" x="3.16">2</text>
-    <text class="marker-label" y="2.85" x="3.36">3</text>
+    <text class="marker-label" y="2.85" x="3.19">2</text>
+    <text class="marker-label" y="2.85" x="3.35">3</text>
 
-    <text class="marker-label" y="1.9" x="0.1">4</text>
-    <text class="marker-label" y="2.1" x="0.1">5</text>
+    <text class="marker-label" y="1.89" x="0.1">4</text>
+    <text class="marker-label" y="2.04" x="0.1">5</text>
 
     <text class="marker-label" y="3.52" x="5.22">4</text>
-    <text class="marker-label" y="3.32" x="5.22">5</text>
+    <text class="marker-label" y="3.37" x="5.22">5</text>
 
-    <text class="marker-label" y="4.63" x="0.58">6</text>
+    <text class="marker-label" y="4.66" x="0.59">6</text>
     <text class="marker-label" y="4.77" x="0.73">7</text>
 
-    <text class="marker-label" y="0.77" x="4.72">6</text>
-    <text class="marker-label" y="0.63" x="4.58">7</text>
+    <text class="marker-label" y="0.73" x="4.72">6</text>
+    <text class="marker-label" y="0.62" x="4.6">7</text>
 
     <!-- Dimensions -->
     <line x1="0" y1="1.28" x2="1.22" y2="1.28" class="dimension" />
-    <text class="dimension" y="1.37" x="0.61">1200±100mm</text>
+    <text class="dimension" y="1.37" x="0.61">1220±100mm</text>
 
     <line x1="1.78" y1="0" x2="1.78" y2="1.22" class="dimension" />
     <line x1="1.22" y1="1.22" x2="1.78" y2="1.22" class="dimension-guide" />
-    <text class="dimension" transform="rotate(-90, 1.85 0.61)" y="0.61" x="1.85">1200±100mm</text>
+    <text class="dimension" transform="rotate(-90, 1.85 0.61)" y="0.61" x="1.85">1220±100mm</text>
 
-    <line x1="1.48" y1="0" x2="1.48" y2="0.46" class="dimension" />
-    <line x1="1.22" y1="0.46" x2="1.48" y2="0.46" class="dimension-guide" />
-    <text class="dimension" transform="rotate(-90, 1.6 0.3)" y="0.3" x="1.6">460±10mm</text>
+    <line x1="1.48" y1="0" x2="1.48" y2="0.61" class="dimension" />
+    <line x1="1.22" y1="0.61" x2="1.48" y2="0.61" class="dimension-guide" />
+    <text class="dimension" transform="rotate(-90, 1.6 0.3)" y="0.3" x="1.6">610±10mm</text>
 
     <line x1="0" y1="3.9" x2="1.48" y2="3.9" class="dimension" />
-    <text class="dimension" y="3.82" x="0.78">1500±100mm</text>
+    <text class="dimension" y="3.82" x="0.78">1480±100mm</text>
 
     <line x1="4.18" y1="-0.06" x2="5.4" y2="-0.06" class="dimension" />
-    <text class="dimension" y="-0.13" x="4.79">1200±100mm</text>
+    <text class="dimension" y="-0.13" x="4.79">1220±100mm</text>
 
-    <line x1="4.18" y1="3.92" x2="5.4" y2="3.92" class="dimension" />
-    <text class="dimension" y="3.85" x="4.79">1200±100mm</text>
+    <line x1="4.18" y1="3.62" x2="5.4" y2="3.62" class="dimension" />
+    <text class="dimension" y="3.72" x="4.79">1220±100mm</text>
 
-    <line x1="3.8" y1="5.4" x2="3.8" y2="3.92" class="dimension" />
-    <line x1="3.8" y1="3.92" x2="4.18" y2="3.92" class="dimension-guide" />
-    <text class="dimension" transform="rotate(90, 3.7 4.66)" y="4.66" x="3.7">1400±100mm</text>
+    <line x1="3.8" y1="5.4" x2="3.8" y2="3.62" class="dimension" />
+    <line x1="3.8" y1="3.62" x2="4.18" y2="3.62" class="dimension-guide" />
+    <text class="dimension" transform="rotate(90, 3.7 4.66)" y="4.66" x="3.7">1700±100mm</text>
 
-    <line x1="2.7" y1="3.3" x2="3.01" y2="3.3" class="dimension" />
-    <line x1="3.01" y1="3.3" x2="3.01" y2="2.77" class="dimension-guide" />
-    <text class="dimension" y="3.4" x="3.02">300±20mm</text>
+    <line x1="2.24" y1="2.11" x2="2.7" y2="2.11" class="dimension" />
+    <text class="dimension" y="1.96" x="2.38">460±20mm</text>
 
-    <line x1="3.46" y1="3" x2="3.92" y2="3" class="dimension" />
-    <line x1="3.46" y1="3" x2="3.46" y2="2.7" class="dimension-guide" />
+    <line x1="2.24" y1="2.11" x2="2.24" y2="2.7" class="dimension" />
+    <text class="dimension" y="2.35" x="1.96">600±20mm</text>
+
+    <line x1="3.31" y1="3" x2="3.92" y2="3" class="dimension" />
+    <line x1="3.31" y1="3" x2="3.31" y2="2.7" class="dimension-guide" />
     <line x1="3.92" y1="3" x2="3.92" y2="2.7" class="dimension-guide" />
-    <text class="dimension" y="3.15" x="3.7">450±10mm</text>
+    <text class="dimension" y="3.15" x="3.7">610±10mm</text>
 
-    <line x1="0.4" y1="1.9" x2="0.4" y2="2.1" class="dimension" />
-    <line x1="0" y1="1.9" x2="0.4" y2="1.9" class="dimension-guide" />
-    <line x1="0" y1="2.1" x2="0.4" y2="2.1" class="dimension-guide" />
-    <text class="dimension" y="2" x="0.75">200±10mm</text>
+    <line x1="0.4" y1="1.885" x2="0.4" y2="2.035" class="dimension" />
+    <line x1="0" y1="1.885" x2="0.4" y2="1.885" class="dimension-guide" />
+    <line x1="0" y1="2.035" x2="0.4" y2="2.035" class="dimension-guide" />
+    <text class="dimension" y="1.96" x="0.75">150±10mm</text>
 
-    <line x1="0.25" y1="2.15" x2="0.25" y2="2.7" class="dimension" />
-    <line x1="0" y1="2.15" x2="0.25" y2="2.15" class="dimension-guide" />
-    <text class="dimension" y="2.4" x="0.55">560±10mm</text>
+    <line x1="0.25" y1="1.96" x2="0.25" y2="2.7" class="dimension" />
+    <line x1="0" y1="1.96" x2="0.25" y2="1.96" class="dimension-guide" />
+    <text class="dimension" y="2.4" x="0.55">740±10mm</text>
 
     <line x1="4.79" y1="0.61" x2="5.4" y2="0" class="dimension-guide" />
-    <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
+    <text class="dimension" y="1.31" x="4.79">1220±100mm</text>
 
     <line x1="4.18" y1="1.22" x2="5.4" y2="1.22" class="dimension" />
-    <text class="dimension" y="1.31" x="4.79">1200±100mm</text>
+
+    <line x1="5.03" y1="2.77" x2="5.4" y2="2.77" class="dimension" />
+    <line x1="5.03" y1="2.77" x2="5.03" y2="2.68" class="dimension-guide" />
+    <text class="dimension" y="2.9" x="5.05">370±100mm</text>
+
+    <line x1="3.92" y1="2.5" x2="4.29" y2="2.5" class="dimension" />
+    <line x1="4.29" y1="2.5" x2="4.29" y2="2.7" class="dimension-guide" />
+    <text class="dimension" y="2.4" x="4.26">370±100mm</text>
 
     <line x1="0" y1="5.5" x2="5.4" y2="5.5" class="dimension" />
     <text class="dimension" y="5.6" x="2.7">5400±100mm</text>
@@ -343,5 +369,15 @@
        class="legend-label"
        y="2.2"
        x="5.2">Inner wall</text>
+
+    <line class="line-follow-guide"
+            x1="4.75"
+            y1="3.1"
+            x2="4.75"
+            y2="3.7" />
+    <text
+       class="legend-label"
+       y="3.4"
+       x="5.2">Line follow guide</text>
   </g>
 </svg>

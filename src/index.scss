@@ -1,4 +1,4 @@
-$primary: #4b35b3;
+$primary: #02A6F2;
 $content-width: 900px;
 
 html, body {
@@ -42,21 +42,31 @@ header {
 }
 
 section#logos {
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: initial;
+    display: grid;
+
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+
+    place-items: center;
+    gap: 1rem;
 
     img {
         display: block;
-        flex-grow: 1;
-        flex-shrink: 1;
         width: 100%;
-        margin: 1em;
         max-height: 100px;
         object-fit: contain;
 
         @media print {
             height: 75px;
+        }
+    }
+
+    @media (width < 600px) {
+        grid-auto-flow: row;
+
+        img {
+            max-height: 8vh;
         }
     }
 }
@@ -69,18 +79,6 @@ section {
 
     &:nth-of-type(2n) {
         background-color: #f5f3f4;
-    }
-}
-
-footer {
-    background-color: #2a2a2a;
-    color: white;
-    padding: 2em 1em;
-    font-size: 80%;
-    text-align: center;
-
-    p {
-        margin: 0;
     }
 }
 
