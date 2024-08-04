@@ -11,8 +11,9 @@
       svg {
         font-family: "Open Sans", Arial, sans-serif;
       }
+
       .arena-wall {
-          fill: none;
+          fill: #02A6F2;
           stroke: #555;
           stroke-width: .02;
       }
@@ -33,12 +34,6 @@
           fill: none;
           stroke: white;
           stroke-width: .05;
-      }
-
-      .arena-wall {
-          fill: none;
-          stroke: #555;
-          stroke-width: .02;
       }
 
       .can {
@@ -225,15 +220,17 @@
   <!-- transform for arena-space coordinates -->
   <g id="arena"
      transform="translate(25 30) scale(100)">
+
+     <!-- arena wall -->
+     <rect width="5.4"
+           height="5.4"
+           x="0"
+           y="0"
+           class="arena-wall"/>
+
     <!-- zones -->
     <use xlink:href="#side-zone"/>
     <use xlink:href="#side-zone" transform="rotate(180 2.7 2.7)"/>
-    <!-- arena wall -->
-    <rect width="5.4"
-          height="5.4"
-          x="0"
-          y="0"
-          class="arena-wall"/>
 
     <!-- Marker labels -->
     <text class="marker-label" y="0.54" x="1.3">0</text>
