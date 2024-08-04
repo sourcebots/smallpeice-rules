@@ -49,7 +49,7 @@
       }
 
       .scoring-line {
-          stroke: #333;
+          stroke: white;
           stroke-width: 0.05;
           fill: none;
       }
