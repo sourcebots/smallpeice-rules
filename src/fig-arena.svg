@@ -60,7 +60,7 @@
       }
 
       .start-zone {
-        stroke: #bbb;
+        stroke: #333;
         stroke-width: 0.02;
         fill: #ffd;
       }
