@@ -125,7 +125,7 @@ table {
 
 .figure {
     margin-inline: auto;
-    max-inline-size: calc(var(--figure-scale, 1.0) * min(var(--content-inline-size), 90vi));
+    inline-size: calc(var(--figure-scale, 1.0) * min(var(--content-inline-size), 90vi));
 }
 
 .figure-medium {
