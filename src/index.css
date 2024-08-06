@@ -1,21 +1,29 @@
-$primary: #02A6F2;
-$content-width: 900px;
+:root {
+    --col-primary: #02A6F2;
+    --content-inline-size: 50rem;
+}
 
-html, body {
+html {
     font-family: "Open Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: initial !important; // Override normalize.css
+    line-height: initial !important; /* Override normalize.css */
 
-    // Increase the font size slightly on desktop, but leaving it as-is for print
+    /* Increase the font size slightly on desktop, but leaving it as-is for print */
     @media screen {
         font-size: 18px;
     }
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 header {
-    padding: 1em 0;
-    background-color: $primary;
+    padding-block: 1em;
+
+    background-color: var(--col-primary);
     color: white;
     display: flex;
     align-items: center;
@@ -33,12 +41,16 @@ header {
 
     @media print {
         img {
-            // Invert colour so it appears nicely on a white background
+            /* Invert colour so it appears nicely on a white background */
             filter: invert(1);
 
-            height: 100px;
+            block-size: 5.5rem;
         }
     }
+}
+
+.hero-logo {
+    inline-size: min(16rem, 90vi);
 }
 
 section#logos {
@@ -53,12 +65,12 @@ section#logos {
 
     img {
         display: block;
-        width: 100%;
-        max-height: 100px;
+        inline-size: 100%;
+        max-block-size: 5.5rem;
         object-fit: contain;
 
         @media print {
-            height: 75px;
+            block-size: 2cm;
         }
     }
 
@@ -66,13 +78,15 @@ section#logos {
         grid-auto-flow: row;
 
         img {
-            max-height: 8vh;
+            max-block-size: 8vb;
         }
     }
 }
 
 section {
-    padding: 0.75em max(calc((100vw - $content-width) / 2), 1rem);
+    padding-block: 0.75em;
+    padding-inline: max(calc((100vi - var(--content-inline-size)) / 2), 1rem);
+
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -83,27 +97,25 @@ section {
 }
 
 h2, h3, h4, h5, h6 {
-    color: $primary;
-    margin: 12px 0;
+    color: var(--col-primary);
+    margin-block: 0.65em;
 }
 
 a {
-    color: $primary;
-
+    color: var(--col-primary);
 }
 
 table {
     margin: 0;
     padding: 0;
-    width: 100%;
 
     thead {
-        color: $primary;
+        color: var(--col-primary);
     }
 
     th {
-        border-bottom: 2px solid $primary;
-        text-align: left;
+        border-block-end: 2px solid var(--col-primary);
+        text-align: start;
     }
 
     th, td {
@@ -111,9 +123,13 @@ table {
     }
 }
 
-img {
-    margin-left: auto;
-    margin-right: auto;
+.figure {
+    margin-inline: auto;
+    inline-size: calc(var(--figure-scale, 1.0) * min(var(--content-inline-size), 90vi));
+}
+
+.figure-medium {
+    --figure-scale: 0.5;
 }
 
 .no-print {
